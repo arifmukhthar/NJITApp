@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		80AC77591BB343AE004E050C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC77581BB343AE004E050C /* AppDelegate.swift */; };
+		80AC775B1BB343AE004E050C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC775A1BB343AE004E050C /* RootViewController.swift */; };
+		80AC775D1BB343AE004E050C /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC775C1BB343AE004E050C /* DataViewController.swift */; };
+		80AC775F1BB343AE004E050C /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC775E1BB343AE004E050C /* ModelController.swift */; };
+		80AC77621BB343AE004E050C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AC77601BB343AE004E050C /* Main.storyboard */; };
+		80AC77641BB343AE004E050C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80AC77631BB343AE004E050C /* Assets.xcassets */; };
+		80AC77671BB343AE004E050C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AC77651BB343AE004E050C /* LaunchScreen.storyboard */; };
+		80AC77721BB343AE004E050C /* NJIT_Student_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC77711BB343AE004E050C /* NJIT_Student_GuideUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80AC776E1BB343AE004E050C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80AC774D1BB343AE004E050C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80AC77541BB343AE004E050C;
+			remoteInfo = "NJIT Student Guide";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		80AC77551BB343AE004E050C /* NJIT Student Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NJIT Student Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80AC77581BB343AE004E050C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		80AC775A1BB343AE004E050C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		80AC775C1BB343AE004E050C /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		80AC775E1BB343AE004E050C /* ModelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
+		80AC77611BB343AE004E050C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		80AC77631BB343AE004E050C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80AC77661BB343AE004E050C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		80AC77681BB343AE004E050C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80AC776D1BB343AE004E050C /* NJIT Student GuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NJIT Student GuideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80AC77711BB343AE004E050C /* NJIT_Student_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJIT_Student_GuideUITests.swift; sourceTree = "<group>"; };
+		80AC77731BB343AE004E050C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80AC77521BB343AE004E050C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80AC776A1BB343AE004E050C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80AC774C1BB343AE004E050C = {
+			isa = PBXGroup;
+			children = (
+				80AC77571BB343AE004E050C /* NJIT Student Guide */,
+				80AC77701BB343AE004E050C /* NJIT Student GuideUITests */,
+				80AC77561BB343AE004E050C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80AC77561BB343AE004E050C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80AC77551BB343AE004E050C /* NJIT Student Guide.app */,
+				80AC776D1BB343AE004E050C /* NJIT Student GuideUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80AC77571BB343AE004E050C /* NJIT Student Guide */ = {
+			isa = PBXGroup;
+			children = (
+				80AC77581BB343AE004E050C /* AppDelegate.swift */,
+				80AC775A1BB343AE004E050C /* RootViewController.swift */,
+				80AC775C1BB343AE004E050C /* DataViewController.swift */,
+				80AC775E1BB343AE004E050C /* ModelController.swift */,
+				80AC77601BB343AE004E050C /* Main.storyboard */,
+				80AC77631BB343AE004E050C /* Assets.xcassets */,
+				80AC77651BB343AE004E050C /* LaunchScreen.storyboard */,
+				80AC77681BB343AE004E050C /* Info.plist */,
+			);
+			path = "NJIT Student Guide";
+			sourceTree = "<group>";
+		};
+		80AC77701BB343AE004E050C /* NJIT Student GuideUITests */ = {
+			isa = PBXGroup;
+			children = (
+				80AC77711BB343AE004E050C /* NJIT_Student_GuideUITests.swift */,
+				80AC77731BB343AE004E050C /* Info.plist */,
+			);
+			path = "NJIT Student GuideUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80AC77541BB343AE004E050C /* NJIT Student Guide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80AC77761BB343AE004E050C /* Build configuration list for PBXNativeTarget "NJIT Student Guide" */;
+			buildPhases = (
+				80AC77511BB343AE004E050C /* Sources */,
+				80AC77521BB343AE004E050C /* Frameworks */,
+				80AC77531BB343AE004E050C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NJIT Student Guide";
+			productName = "NJIT Student Guide";
+			productReference = 80AC77551BB343AE004E050C /* NJIT Student Guide.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80AC776C1BB343AE004E050C /* NJIT Student GuideUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80AC77791BB343AE004E050C /* Build configuration list for PBXNativeTarget "NJIT Student GuideUITests" */;
+			buildPhases = (
+				80AC77691BB343AE004E050C /* Sources */,
+				80AC776A1BB343AE004E050C /* Frameworks */,
+				80AC776B1BB343AE004E050C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80AC776F1BB343AE004E050C /* PBXTargetDependency */,
+			);
+			name = "NJIT Student GuideUITests";
+			productName = "NJIT Student GuideUITests";
+			productReference = 80AC776D1BB343AE004E050C /* NJIT Student GuideUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80AC774D1BB343AE004E050C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Fantastic4;
+				TargetAttributes = {
+					80AC77541BB343AE004E050C = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					80AC776C1BB343AE004E050C = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 80AC77541BB343AE004E050C;
+					};
+				};
+			};
+			buildConfigurationList = 80AC77501BB343AE004E050C /* Build configuration list for PBXProject "NJIT Student Guide" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80AC774C1BB343AE004E050C;
+			productRefGroup = 80AC77561BB343AE004E050C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80AC77541BB343AE004E050C /* NJIT Student Guide */,
+				80AC776C1BB343AE004E050C /* NJIT Student GuideUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80AC77531BB343AE004E050C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80AC77671BB343AE004E050C /* LaunchScreen.storyboard in Resources */,
+				80AC77641BB343AE004E050C /* Assets.xcassets in Resources */,
+				80AC77621BB343AE004E050C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80AC776B1BB343AE004E050C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80AC77511BB343AE004E050C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80AC775B1BB343AE004E050C /* RootViewController.swift in Sources */,
+				80AC775F1BB343AE004E050C /* ModelController.swift in Sources */,
+				80AC775D1BB343AE004E050C /* DataViewController.swift in Sources */,
+				80AC77591BB343AE004E050C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80AC77691BB343AE004E050C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80AC77721BB343AE004E050C /* NJIT_Student_GuideUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80AC776F1BB343AE004E050C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80AC77541BB343AE004E050C /* NJIT Student Guide */;
+			targetProxy = 80AC776E1BB343AE004E050C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		80AC77601BB343AE004E050C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80AC77611BB343AE004E050C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		80AC77651BB343AE004E050C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				80AC77661BB343AE004E050C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		80AC77741BB343AE004E050C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		80AC77751BB343AE004E050C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		80AC77771BB343AE004E050C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "NJIT Student Guide/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Fantastic4.NJIT-Student-Guide";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		80AC77781BB343AE004E050C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "NJIT Student Guide/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Fantastic4.NJIT-Student-Guide";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		80AC777A1BB343AE004E050C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "NJIT Student GuideUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Fantastic4.NJIT-Student-GuideUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "NJIT Student Guide";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		80AC777B1BB343AE004E050C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "NJIT Student GuideUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Fantastic4.NJIT-Student-GuideUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "NJIT Student Guide";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80AC77501BB343AE004E050C /* Build configuration list for PBXProject "NJIT Student Guide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80AC77741BB343AE004E050C /* Debug */,
+				80AC77751BB343AE004E050C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80AC77761BB343AE004E050C /* Build configuration list for PBXNativeTarget "NJIT Student Guide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80AC77771BB343AE004E050C /* Debug */,
+				80AC77781BB343AE004E050C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		80AC77791BB343AE004E050C /* Build configuration list for PBXNativeTarget "NJIT Student GuideUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80AC777A1BB343AE004E050C /* Debug */,
+				80AC777B1BB343AE004E050C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 80AC774D1BB343AE004E050C /* Project object */;
+}
