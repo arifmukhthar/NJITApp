@@ -15,6 +15,9 @@
 		80AC77641BB343AE004E050C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80AC77631BB343AE004E050C /* Assets.xcassets */; };
 		80AC77671BB343AE004E050C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AC77651BB343AE004E050C /* LaunchScreen.storyboard */; };
 		80AC77721BB343AE004E050C /* NJIT_Student_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC77711BB343AE004E050C /* NJIT_Student_GuideUITests.swift */; };
+		B76BA90E1BB88D75000754F3 /* ScheduleTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BA90D1BB88D75000754F3 /* ScheduleTable.swift */; settings = {ASSET_TAGS = (); }; };
+		B7FED58F1BB62D4C00F3FEB8 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FED58E1BB62D4C00F3FEB8 /* ScheduleViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B7FED5911BB6449F00F3FEB8 /* AtheleticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		80AC776D1BB343AE004E050C /* NJIT Student GuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NJIT Student GuideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AC77711BB343AE004E050C /* NJIT_Student_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJIT_Student_GuideUITests.swift; sourceTree = "<group>"; };
 		80AC77731BB343AE004E050C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B76BA90D1BB88D75000754F3 /* ScheduleTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleTable.swift; sourceTree = "<group>"; };
+		B7FED58E1BB62D4C00F3FEB8 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtheleticViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,9 @@
 				80AC775C1BB343AE004E050C /* DataViewController.swift */,
 				80AC775E1BB343AE004E050C /* ModelController.swift */,
 				80AC77601BB343AE004E050C /* Main.storyboard */,
+				B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */,
+				B7FED58E1BB62D4C00F3FEB8 /* ScheduleViewController.swift */,
+				B76BA90D1BB88D75000754F3 /* ScheduleTable.swift */,
 				80AC77631BB343AE004E050C /* Assets.xcassets */,
 				80AC77651BB343AE004E050C /* LaunchScreen.storyboard */,
 				80AC77681BB343AE004E050C /* Info.plist */,
@@ -202,9 +211,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7FED58F1BB62D4C00F3FEB8 /* ScheduleViewController.swift in Sources */,
 				80AC775B1BB343AE004E050C /* RootViewController.swift in Sources */,
+				B7FED5911BB6449F00F3FEB8 /* AtheleticViewController.swift in Sources */,
 				80AC775F1BB343AE004E050C /* ModelController.swift in Sources */,
 				80AC775D1BB343AE004E050C /* DataViewController.swift in Sources */,
+				B76BA90E1BB88D75000754F3 /* ScheduleTable.swift in Sources */,
 				80AC77591BB343AE004E050C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +407,7 @@
 				80AC77781BB343AE004E050C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		80AC77791BB343AE004E050C /* Build configuration list for PBXNativeTarget "NJIT Student GuideUITests" */ = {
 			isa = XCConfigurationList;
@@ -403,6 +416,7 @@
 				80AC777B1BB343AE004E050C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
