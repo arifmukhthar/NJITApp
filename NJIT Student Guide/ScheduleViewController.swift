@@ -8,7 +8,7 @@ class ScheduleViewController: UITableViewController {
     
     var secondArray = [ScheduleTable]()
     
-
+    var temp = String()
     
     
     override func viewDidLoad() {
@@ -48,6 +48,8 @@ class ScheduleViewController: UITableViewController {
         secondArrayTwo = secondArray[indexPath.row]
         
         DestViewController.list = secondArrayTwo.SecondTitle
+        
+        DestViewController.scheduleChoice = appoinmentList[indexPath.row]
         
         
         
