@@ -58,9 +58,5 @@ class AtheleticViewController: UITableViewController {
         }
         
     }
-  
     
-  
- 
-
 }

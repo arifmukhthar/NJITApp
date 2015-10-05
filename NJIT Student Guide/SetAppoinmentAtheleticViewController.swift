@@ -17,9 +17,6 @@ class SetAppoinmentAtheleticViewController: UIViewController {
     var from = String()
     var to = String()
     @IBOutlet weak var datePick: UIDatePicker!
-    //@IBOutlet weak var fromTime: UIDatePicker!
-    @IBOutlet weak var toTime: UIDatePicker!
-    
     
     @IBAction func btnClick(sender: UIButton) {
         myLabel.text = datetime
