@@ -14,8 +14,10 @@ class SetAppoinmentAtheleticViewController: UIViewController {
     var scheduleChoice = String()
     var optionChoosed = String()
     var datetime = String()
+    var from = String()
+    var to = String()
     @IBOutlet weak var datePick: UIDatePicker!
-    @IBOutlet weak var fromTime: UIDatePicker!
+    //@IBOutlet weak var fromTime: UIDatePicker!
     @IBOutlet weak var toTime: UIDatePicker!
     
     
@@ -24,18 +26,28 @@ class SetAppoinmentAtheleticViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        //let today : NSDate =
-        //print("\(today)")
         myLabel.text = "Schedule Choice: \(scheduleChoice) Option Choosed : \(optionChoosed)"
-        datePick.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
-        //fromTime.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
-        //toTime.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+        //datePick.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+        ////fromTime.addTarget(self, action: Selector("handleFromTimePicker"), forControlEvents: UIControlEvents.TouchUpInside)
+        //toTime.addTarget(self, action: Selector("handleToTimePicker"), forControlEvents: UIControlEvents.TouchUpInside)
         
     }
+    
+    /*func handleFromTimePicker(sender : UIDatePicker){
+    var timeformatter = NSDateFormatter()
+        timeformatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        from = timeformatter.stringFromDate(fromTime.date)
+        datetime += from
+        print("\(from)")
+        myLabel.text = datetime
+        
+    
+    }
+    
     func handleDatePicker(sender : UIDatePicker){
         
         datePick.minimumDate = NSDate()
-        var dateformatter = NSDateFormatter()
+        let dateformatter = NSDateFormatter()
         //var timeformatter = NSDateFormatter()
         //var timeformatter1 = NSDateFormatter()
 
@@ -50,7 +62,7 @@ class SetAppoinmentAtheleticViewController: UIViewController {
         //datetime = timeformatter1.stringFromDate(toTime.date)
         myLabel.text = datetime
 
-    }
+    }*/
     
    
     
