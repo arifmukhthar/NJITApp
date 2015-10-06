@@ -13,7 +13,7 @@ class SetAppoinmentAtheleticViewController: UIViewController {
     //@IBOutlet weak var myLabel: UILabel!
     var scheduleChoice = String()
     var optionChoosed = String()
-    var datetime = String()
+    var datetimechoosed = String()
     @IBOutlet weak var datePick: UIDatePicker!
     
     @IBAction func btnClick(sender: UIButton) {
@@ -33,7 +33,7 @@ class SetAppoinmentAtheleticViewController: UIViewController {
         datePick.minimumDate = NSDate()
         let dateformatter = NSDateFormatter()
         dateformatter.dateStyle = NSDateFormatterStyle.ShortStyle
-        datetime = dateformatter.stringFromDate(datePick.date)
+        datetimechoosed = dateformatter.stringFromDate(datePick.date)
         //myLabel.text = datetime
 
     }
@@ -41,7 +41,7 @@ class SetAppoinmentAtheleticViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let destViewController = segue.destinationViewController as! DateSelectAtheleticViewController
         
-        destViewController.dateChoosed = datetime
+        destViewController.dateChoosed = datetimechoosed
         destViewController.AthOrPro = scheduleChoice
         destViewController.choice = optionChoosed
     }
