@@ -297,25 +297,6 @@
             </objects>
             <point key="canvasLocation" x="3822" y="443"/>
         </scene>
-        <!--Set Appoinment Professor View Controller-->
-        <scene sceneID="BwZ-Eu-cRp">
-            <objects>
-                <viewController id="6aI-vk-qPx" customClass="SetAppoinmentProfessorViewController" customModule="NJIT_Student_Guide" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="G9Z-cx-8ho"/>
-                        <viewControllerLayoutGuide type="bottom" id="nLj-z1-Rlj"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="L0M-ih-lCU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ni-UH-GeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2868" y="1185"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="eUP-MV-lAu">
             <objects>
