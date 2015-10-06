@@ -7,11 +7,13 @@ class DateSelectAtheleticViewController: UIViewController, MFMailComposeViewCont
 
     @IBOutlet weak var toTimePicker: UIDatePicker!
     @IBOutlet weak var fromTimePicker: UIDatePicker!
-    var to : NSDate!
-    var from : NSDate!
+    var to = String()
+    var from = String()
     @IBOutlet weak var toTime: UILabel!
     @IBOutlet weak var fromTime: UILabel!
     var dateChoosed = String()
+    var AthOrPro = String()
+    var choice = String()
     
     @IBOutlet weak var date: UILabel!
     override func viewDidLoad() {
@@ -39,20 +41,6 @@ class DateSelectAtheleticViewController: UIViewController, MFMailComposeViewCont
             self.showSendMailErrorAlert()
             print("No mail app present")
         }
-        /*print(from)
-        print(to)
-        var order = NSCalendar.currentCalendar().compareDate(from, toDate: to, toUnitGranularity: .Day)
-        
-        switch order {
-        case .OrderedAscending:
-            print("Ascending")
-        case .OrderedDescending:
-            print("Descending")
-        case .OrderedSame:
-            print("Same")
-        default:
-            print("Default")
-        }*/
     
     }
     
@@ -61,8 +49,13 @@ class DateSelectAtheleticViewController: UIViewController, MFMailComposeViewCont
         mailCompose.mailComposeDelegate = self
         
         mailCompose.setToRecipients(["br.ragul@gmail.com"])
-        mailCompose.setSubject("Appoinment Setter Test")
-        mailCompose.setMessageBody("This is an appointment setter test mail. Please ignore", isHTML: false)
+        mailCompose.setSubject("Reg: Appointment")
+        if AthOrPro == "Atheletic Center"{
+            
+            mailCompose.setMessageBody("Hi Could you please set up an appointment from \(from) to \(to) on \(dateChoosed)", isHTML: false)
+        }else{
+            mailCompose.setMessageBody("Hi Professor, Could you please set up an appointment from \(from) to \(to) on \(dateChoosed)", isHTML: false)
+        }
         
         return mailCompose
     }
@@ -77,14 +70,13 @@ class DateSelectAtheleticViewController: UIViewController, MFMailComposeViewCont
     }
 
     @IBAction func fromTImeChanged(sender: UIDatePicker) {
-        from = fromTimePicker.date
         let timeFormatter = NSDateFormatter()
         timeFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
         fromTime.text = timeFormatter.stringFromDate(fromTimePicker.date)
     }
 
     @IBAction func toTimeChanged(sender: AnyObject) {
-        to = toTimePicker.date
+        toTimePicker.minimumDate = fromTimePicker.minimumDate
         let timeFormatter = NSDateFormatter()
         timeFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
         toTime.text = timeFormatter.stringFromDate(toTimePicker.date)

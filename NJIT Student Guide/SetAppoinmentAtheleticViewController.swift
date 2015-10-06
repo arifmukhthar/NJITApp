@@ -42,6 +42,8 @@ class SetAppoinmentAtheleticViewController: UIViewController {
         let destViewController = segue.destinationViewController as! DateSelectAtheleticViewController
         
         destViewController.dateChoosed = datetime
+        destViewController.AthOrPro = scheduleChoice
+        destViewController.choice = optionChoosed
     }
     
    
