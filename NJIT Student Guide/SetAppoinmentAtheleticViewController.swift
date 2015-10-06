@@ -10,56 +10,39 @@ import UIKit
 
 class SetAppoinmentAtheleticViewController: UIViewController {
     
-    @IBOutlet weak var myLabel: UILabel!
+    //@IBOutlet weak var myLabel: UILabel!
     var scheduleChoice = String()
     var optionChoosed = String()
     var datetime = String()
-    var from = String()
-    var to = String()
     @IBOutlet weak var datePick: UIDatePicker!
     
     @IBAction func btnClick(sender: UIButton) {
-        myLabel.text = datetime
+        //myLabel.text = datetime
     }
     
     override func viewDidLoad() {
-        myLabel.text = "Schedule Choice: \(scheduleChoice) Option Choosed : \(optionChoosed)"
-        //datePick.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
-        ////fromTime.addTarget(self, action: Selector("handleFromTimePicker"), forControlEvents: UIControlEvents.TouchUpInside)
-        //toTime.addTarget(self, action: Selector("handleToTimePicker"), forControlEvents: UIControlEvents.TouchUpInside)
-        
-    }
+        //myLabel.text = "Schedule Choice: \(scheduleChoice) Option Choosed : \(optionChoosed)"
+        print(scheduleChoice)
+        print(optionChoosed)
+        datePick.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+        }
     
-    /*func handleFromTimePicker(sender : UIDatePicker){
-    var timeformatter = NSDateFormatter()
-        timeformatter.timeStyle = NSDateFormatterStyle.ShortStyle
-        from = timeformatter.stringFromDate(fromTime.date)
-        datetime += from
-        print("\(from)")
-        myLabel.text = datetime
-        
-    
-    }
     
     func handleDatePicker(sender : UIDatePicker){
         
         datePick.minimumDate = NSDate()
         let dateformatter = NSDateFormatter()
-        //var timeformatter = NSDateFormatter()
-        //var timeformatter1 = NSDateFormatter()
-
         dateformatter.dateStyle = NSDateFormatterStyle.ShortStyle
-        //timeformatter.timeStyle = NSDateFormatterStyle.ShortStyle
-        //timeformatter1.timeStyle = NSDateFormatterStyle.ShortStyle
-        
-        
         datetime = dateformatter.stringFromDate(datePick.date)
-        //datetime += timeformatter.stringFromDate(fromTime.date)
-        datetime += "  to  "
-        //datetime = timeformatter1.stringFromDate(toTime.date)
-        myLabel.text = datetime
+        //myLabel.text = datetime
 
-    }*/
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let destViewController = segue.destinationViewController as! DateSelectAtheleticViewController
+        
+        destViewController.dateChoosed = datetime
+    }
     
    
     
