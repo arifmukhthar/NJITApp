@@ -9,10 +9,14 @@ class ScheduleViewController: UITableViewController {
     var secondArray = [ScheduleTable]()
     
     var temp = String()
-    
+    var MyArray = [String()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        getJSON("https://web.njit.edu/~ts336/professor.php")
         
         appoinmentList = [("Atheletic Center"),("Professors")]
         
@@ -20,6 +24,24 @@ class ScheduleViewController: UITableViewController {
                         ScheduleTable(SecondTitle :["Prof. Borcea","Prof. Oria","Prof. Geller","Prof Roshan","Prof Neamtiu","Prof Nassimi"])]
     }
 
+    func getJSON(url: String){
+        let data = NSData(contentsOfURL: NSURL(string: url)!)
+        
+        do{
+            let JSONresult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSArray
+            var i = 0
+            
+            for _ in JSONresult!{
+                let dd = JSONresult![i]
+                MyArray.append(dd["name"] as! String)
+                i = i+1
+            }
+            print(JSONresult)
+
+        }catch let error as NSError{
+            print(error)
+        }
+    }
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
