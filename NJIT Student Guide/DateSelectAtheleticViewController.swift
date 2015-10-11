@@ -24,7 +24,7 @@ class DateSelectAtheleticViewController: UIViewController, MFMailComposeViewCont
         print(dateChoosed)
         date.text = dateChoosed
         selectedOption.text = "\(choice)"
-
+	
     }
 
     override func didReceiveMemoryWarning() {
