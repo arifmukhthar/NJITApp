@@ -5,8 +5,15 @@ class AtheleticViewController: UITableViewController {
     var list = [String]()
     var scheduleChoice = String()
     var temp = String()
+     var MyArray = [String()]
     override func viewDidLoad() {
         super.viewDidLoad()
+        if scheduleChoice == "Athletic Center"
+        {
+                getJSON("https://web.njit.edu/~ts336/athletic.php")
+        }else{
+            getJSON("https://web.njit.edu/~ts336/professor.php")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -19,7 +26,7 @@ class AtheleticViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell1 = UITableViewCell()
-        if scheduleChoice == "Atheletic Center"
+        if scheduleChoice == "Athletic Center"
         {
         let Cell = self.tableView.dequeueReusableCellWithIdentifier("AtheleticCell", forIndexPath: indexPath) as UITableViewCell
         Cell.textLabel?.text = list[indexPath.row]
@@ -33,6 +40,30 @@ class AtheleticViewController: UITableViewController {
         return cell1
     }
     
+    func getJSON(url: String){
+        let data = NSData(contentsOfURL: NSURL(string: url)!)
+        
+        do{
+            let JSONresult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSArray
+            var i = 0
+            
+            for _ in JSONresult!{
+                let dd = JSONresult![i]
+                if scheduleChoice == "Athletic Center"{
+                list.append(dd["games"] as! String)
+                }else{
+                    list.append(dd["name"] as! String)
+                }
+                i = i+1
+            }
+            print(JSONresult)
+            
+        }catch let error as NSError{
+            print(error)
+        }
+    }
+
+    
  
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
@@ -43,25 +74,6 @@ class AtheleticViewController: UITableViewController {
         destViewController.scheduleChoice = scheduleChoice
         
         destViewController.optionChoosed = list[indexPath.row]
-        
-        /*if scheduleChoice == d"Atheletic Center"
-        {
-        
-            let destViewController = segue.destinationViewController as! SetAppoinmentAtheleticViewController
-        
-            destViewController.scheduleChoice = scheduleChoice
-        
-            destViewController.optionChoosed = list[indexPath.row]
-        }
-        else{
-        
-            let destViewController = segue.destinationViewController as! SetAppoinmentAtheleticViewController
-            
-            destViewController.scheduleChoice = scheduleChoice
-            
-            destViewController.optionChoosed = list[indexPath.row]
-            
-        }*/
         
     }
     

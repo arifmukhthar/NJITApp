@@ -23,7 +23,11 @@ class DateSelectAtheleticViewController: UIViewController, MFMailComposeViewCont
         super.viewDidLoad()
         print(dateChoosed)
         date.text = dateChoosed
-        selectedOption.text = "\(choice)"
+        if AthOrPro == "Athletic Center"{
+        selectedOption.text = "\(choice) - Athletic Center"
+        }else{
+            selectedOption.text = "\(choice)"
+        }
 
     }
 
@@ -67,7 +71,7 @@ class DateSelectAtheleticViewController: UIViewController, MFMailComposeViewCont
         let temp2 : String = toTime.text!
         mailCompose.setToRecipients(["br.ragul@gmail.com"])
         mailCompose.setSubject("Reg: Appointment")
-        if AthOrPro == "Atheletic Center"{
+        if AthOrPro == "Athletic Center"{
            
             mailCompose.setMessageBody("Hi Could you please set up an appointment from \(temp1) to \(temp2) on \(dateChoosed)", isHTML: false)
         }else{
