@@ -20,6 +20,17 @@ class DateSelectAtheleticViewController: UIViewController, MFMailComposeViewCont
     @IBOutlet weak var selectedOption: UILabel!
     @IBOutlet weak var date: UILabel!
     override func viewDidLoad() {
+        
+        let date1 = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.timeStyle = .ShortStyle
+        //date1.dateByAddingTimeInterval(3600)
+        fromTime.text = formatter.stringFromDate(date1)
+        fromtime = date1
+        totime = date1.dateByAddingTimeInterval(3600)
+        toTime.text = formatter.stringFromDate(date1.dateByAddingTimeInterval(3600))
+        toTimePicker.setDate(date1.dateByAddingTimeInterval(3600), animated: true)
+        
         super.viewDidLoad()
         print(dateChoosed)
         date.text = dateChoosed
@@ -95,6 +106,7 @@ class DateSelectAtheleticViewController: UIViewController, MFMailComposeViewCont
     }
 
     @IBAction func toTimeChanged(sender: UIDatePicker) {
+        
         toTimePicker.minimumDate = fromTimePicker.minimumDate
         let timeFormatter = NSDateFormatter()
         timeFormatter.timeStyle = NSDateFormatterStyle.ShortStyle
