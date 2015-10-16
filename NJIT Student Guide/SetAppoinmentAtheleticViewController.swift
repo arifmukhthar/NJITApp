@@ -11,6 +11,10 @@ class SetAppoinmentAtheleticViewController: UIViewController {
     override func viewDidLoad() {
         print(scheduleChoice)
         print(optionChoosed)
+        let date = NSDate()
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = .ShortStyle
+        datetimechoosed = formatter.stringFromDate(date)
         datePick.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
         }
     
