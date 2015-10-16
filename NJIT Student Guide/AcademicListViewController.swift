@@ -11,16 +11,30 @@ import UIKit
 class AcademicListViewController: UITableViewController {
     
     var year = String()
-      var list = [String]()
+      var infodata = [String]()
+    var yeardata = [String]()
+    
+    @IBOutlet var TblViewOutlet: UITableView!
+    
     override func viewDidLoad() {
         
-       // print(year)
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl!.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.tableView.addSubview(refreshControl!)
         
         getJSON("https://web.njit.edu/~rb454/academiccalendar.php")
-       
+        
+        if infodata.count != 0 {
         super.viewDidLoad()
-         print(list)
+        }
+        TblViewOutlet.reloadData()
+         print(infodata)
 
+    }
+    
+    func refresh(sender:AnyObject?){
+        TblViewOutlet.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,38 +42,35 @@ class AcademicListViewController: UITableViewController {
     }
     
     func getJSON(url:String){
-        
-        let url : NSURL = NSURL(string:url)!
-        let request : NSMutableURLRequest = NSMutableURLRequest(URL: url)
-        
-        let bodyData = "data='\(year)'"
+    
+        let request = NSMutableURLRequest(URL: NSURL(string: url)!)
         request.HTTPMethod = "POST"
         
-        request.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
-            {
-                (response, data, error) in
-                print(data)
-                do{
-                    let JSONresult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSArray
-                    var i = 0
+        let params = "data='\(year)'"
+        request.HTTPBody = params.dataUsingEncoding(NSUTF8StringEncoding)
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            data, response, error in
+            do{
+                var i = 0
+                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSArray
+                print(json)
+                for _ in json! {
+                    let dd = json![i]
+                    self.infodata.append(dd["Information"] as! String)
+                    self.yeardata.append(dd["Date"] as! String)
+                    i++
                     
-                    for _ in JSONresult!{
-                        let dd = JSONresult![i]
-                        
-                        self.list.append(dd["Information"] as! String)
-                        
-                        i = i+1
-                    }
-                    //print(JSONresult)
-                    
-                }catch let error as NSError{
-                    print(error)
                 }
-               // print(self.list)
+                self.TblViewOutlet.reloadData()
                 
+            }catch _ as NSError{
+                
+            }
+            
+            
+            
         }
-
+        task.resume()
         
     }
     
@@ -68,13 +79,13 @@ class AcademicListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return self.infodata.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("AcademicListCell", forIndexPath: indexPath) as UITableViewCell
-        
-        cell.textLabel?.text = self.list[indexPath.row]
+        let cell  = tableView.dequeueReusableCellWithIdentifier("AcademicListCell", forIndexPath: indexPath) as! AcademicCell
+        cell.infoLabel.text = self.infodata[indexPath.row]
+        cell.yearLabel.text = self.yeardata[indexPath.row]
         return cell
     }
     
