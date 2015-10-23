@@ -136,6 +136,7 @@
 		80AC77571BB343AE004E050C /* NJIT Student Guide */ = {
 			isa = PBXGroup;
 			children = (
+				04EC833A1BDAA15B0018D535 /* Images */,
 				80AC77581BB343AE004E050C /* AppDelegate.swift */,
 				80AC775A1BB343AE004E050C /* RootViewController.swift */,
 				80AC775C1BB343AE004E050C /* DataViewController.swift */,
@@ -154,7 +155,6 @@
 				80AC77631BB343AE004E050C /* Assets.xcassets */,
 				80AC77651BB343AE004E050C /* LaunchScreen.storyboard */,
 				80AC77681BB343AE004E050C /* Info.plist */,
-				04EC833A1BDAA15B0018D535 /* Images */,
 			);
 			path = "NJIT Student Guide";
 			sourceTree = "<group>";
