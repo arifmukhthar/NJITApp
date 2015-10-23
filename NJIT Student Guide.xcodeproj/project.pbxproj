@@ -212,6 +212,7 @@
 		80AC774D1BB343AE004E050C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Fantastic4;
 				TargetAttributes = {
