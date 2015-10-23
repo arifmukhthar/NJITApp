@@ -280,39 +280,46 @@
         <scene sceneID="uqz-hF-2CJ">
             <objects>
                 <tableViewController id="iQn-fh-V2t" customClass="AcademicListViewController" customModule="NJIT_Student_Guide" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="S7c-xu-CMZ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="28" sectionFooterHeight="28" id="S7c-xu-CMZ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AcademicListCell" id="C1Q-U8-DAE" customClass="AcademicCell" customModule="NJIT_Student_Guide" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AcademicListCell" rowHeight="69" id="C1Q-U8-DAE" customClass="AcademicCell" customModule="NJIT_Student_Guide" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C1Q-U8-DAE" id="Mej-Zj-yLq">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="68"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qK-7m-CPd">
-                                            <rect key="frame" x="24" y="14" width="107" height="21"/>
+                                            <rect key="frame" x="24" y="14" width="107" height="46"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCs-mT-JJx">
-                                            <rect key="frame" x="145" y="14" width="442" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gkd-rc-nkC">
+                                            <rect key="frame" x="139" y="0.0" width="453" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="E07-tc-nGv"/>
+                                            </constraints>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                     <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="gkd-rc-nkC" secondAttribute="bottom" id="790-Mg-3Po"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="gkd-rc-nkC" secondAttribute="trailing" id="YU9-Ct-jD4"/>
+                                        <constraint firstItem="gkd-rc-nkC" firstAttribute="leading" secondItem="Mej-Zj-yLq" secondAttribute="leadingMargin" constant="131" id="h2f-vy-Sf4"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <outlet property="infoLabel" destination="jCs-mT-JJx" id="yp3-yQ-Bue"/>
+                                    <outlet property="textViewInfo" destination="gkd-rc-nkC" id="tcJ-Fb-X0h"/>
                                     <outlet property="yearLabel" destination="5qK-7m-CPd" id="eHA-NN-mpM"/>
                                 </connections>
                             </tableViewCell>
@@ -347,13 +354,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtO-uX-35a">
-                                <rect key="frame" x="212" y="374.5" width="176" height="105"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtO-uX-35a">
+                                <rect key="frame" x="212" y="375" width="176" height="105"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="building1X-1"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9w-YY-bfs">
-                                <rect key="frame" x="396" y="374.5" width="176" height="105"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9w-YY-bfs">
+                                <rect key="frame" x="396" y="375" width="176" height="105"/>
                                 <animations/>
                                 <state key="normal" title="Button"/>
                             </button>
@@ -366,30 +373,30 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZU-gj-rV9">
-                                <rect key="frame" x="28" y="262" width="176" height="104.5"/>
+                                <rect key="frame" x="28" y="262" width="176" height="105"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="PROFESSor"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPT-gv-gvY">
-                                <rect key="frame" x="396" y="262" width="176" height="104.5"/>
+                                <rect key="frame" x="396" y="262" width="176" height="105"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="shuttle-1"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5F-kY-yYO">
-                                <rect key="frame" x="28" y="374.5" width="176" height="105"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5F-kY-yYO">
+                                <rect key="frame" x="28" y="375" width="176" height="105"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="compass1X-1"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhQ-Fs-hhz">
-                                <rect key="frame" x="28" y="487.5" width="176" height="104.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhQ-Fs-hhz">
+                                <rect key="frame" x="28" y="488" width="176" height="105"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="LOSTNDFOUND-1"/>
                                 <connections>
                                     <segue destination="E7N-Bk-0D0" kind="show" id="MKM-ga-DuQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIl-vb-KNA">
-                                <rect key="frame" x="212" y="487.5" width="176" height="104.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BIl-vb-KNA">
+                                <rect key="frame" x="212" y="488" width="176" height="105"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="SELLORBUYS-1"/>
                             </button>
@@ -400,13 +407,13 @@
                                     <constraint firstAttribute="height" constant="69" id="3Eq-Vb-EDV"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igr-Vx-vf1">
-                                <rect key="frame" x="396" y="487.5" width="176" height="104.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igr-Vx-vf1">
+                                <rect key="frame" x="396" y="488" width="176" height="105"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="FOODNRME-1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svv-TU-5KT">
-                                <rect key="frame" x="212" y="262" width="176" height="104.5"/>
+                                <rect key="frame" x="212" y="262" width="176" height="105"/>
                                 <animations/>
                                 <state key="normal" backgroundImage="VECTOR1X"/>
                             </button>

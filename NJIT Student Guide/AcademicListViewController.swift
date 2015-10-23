@@ -24,12 +24,14 @@ class AcademicListViewController: UITableViewController {
         self.tableView.addSubview(refreshControl!)
         
         getJSON("https://web.njit.edu/~rb454/academiccalendar.php")
-        
-        if infodata.count != 0 {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            self.TblViewOutlet.reloadData()
+        })
+     
         super.viewDidLoad()
-        }
+      
         TblViewOutlet.reloadData()
-         print(infodata)
+         //print(infodata)
 
     }
     
@@ -48,12 +50,14 @@ class AcademicListViewController: UITableViewController {
         
         let params = "data='\(year)'"
         request.HTTPBody = params.dataUsingEncoding(NSUTF8StringEncoding)
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
-            data, response, error in
+        
+        let task1 = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: {data,response, error -> Void in
+            print("data: \(data)")
+        
             do{
                 var i = 0
                 let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSArray
-                print(json)
+                //print(json)
                 for _ in json! {
                     let dd = json![i]
                     self.infodata.append(dd["Information"] as! String)
@@ -66,10 +70,16 @@ class AcademicListViewController: UITableViewController {
             }catch _ as NSError{
                 
             }
-            
-            
-            
-        }
+
+        
+        })
+        
+       
+        task1.resume()
+        
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
+            data, response, error in
+                    }
         task.resume()
         
     }
@@ -83,9 +93,11 @@ class AcademicListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
         let cell  = tableView.dequeueReusableCellWithIdentifier("AcademicListCell", forIndexPath: indexPath) as! AcademicCell
-        cell.infoLabel.text = self.infodata[indexPath.row]
+        cell.textViewInfo.text = self.infodata[indexPath.row]
         cell.yearLabel.text = self.yeardata[indexPath.row]
+        print(self.yeardata[indexPath.row])
         return cell
     }
     
