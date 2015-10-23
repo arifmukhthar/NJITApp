@@ -130,8 +130,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ggn-Vn-c26">
-                                <rect key="frame" x="16" y="91" width="260" height="126"/>
+                            <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ggn-Vn-c26">
+                                <rect key="frame" x="16" y="91" width="320" height="216"/>
                                 <animations/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
                                 <date key="date" timeIntervalSinceReferenceDate="465366164.93929899">
@@ -142,7 +142,7 @@
                                 </date>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iof-ka-NHQ">
-                                <rect key="frame" x="107" y="250" width="91" height="30"/>
+                                <rect key="frame" x="131" y="341" width="91" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Choose Time"/>
                                 <connections>
@@ -152,6 +152,10 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ggn-Vn-c26" firstAttribute="top" secondItem="nZL-Sb-6R0" secondAttribute="bottom" constant="27" id="33Y-sB-ie1"/>
+                            <constraint firstItem="ggn-Vn-c26" firstAttribute="leading" secondItem="vXW-J6-eup" secondAttribute="leadingMargin" constant="-4" id="Wyu-oa-9tY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OBR-Kd-C1Z"/>
                     <connections>
@@ -175,7 +179,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ljj-Wu-syv">
-                                <rect key="frame" x="16" y="89" width="137" height="104"/>
+                                <rect key="frame" x="20" y="72" width="137" height="104"/>
                                 <animations/>
                                 <date key="date" timeIntervalSinceReferenceDate="465372880.58025002">
                                     <!--2015-10-01 06:14:40 +0000-->
@@ -185,7 +189,7 @@
                                 </connections>
                             </datePicker>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NFd-nr-FAS">
-                                <rect key="frame" x="174" y="89" width="139" height="104"/>
+                                <rect key="frame" x="157" y="72" width="139" height="104"/>
                                 <animations/>
                                 <date key="date" timeIntervalSinceReferenceDate="465700525.32892698">
                                     <!--2015-10-05 01:15:25 +0000-->
@@ -195,42 +199,42 @@
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r37-v2-hZ9">
-                                <rect key="frame" x="185" y="265" width="120" height="20.5"/>
+                                <rect key="frame" x="176" y="260" width="120" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="812-h9-oat">
-                                <rect key="frame" x="87" y="236" width="48.5" height="20.5"/>
+                                <rect key="frame" x="87" y="223" width="48.5" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To     :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHw-Cb-ezs">
-                                <rect key="frame" x="87" y="265" width="45.5" height="20.5"/>
+                                <rect key="frame" x="90" y="260" width="45.5" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rS1-6n-ZBK">
-                                <rect key="frame" x="185" y="294" width="162" height="20.5"/>
+                                <rect key="frame" x="176" y="288" width="162" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Date :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEC-Hr-qRp">
-                                <rect key="frame" x="16" y="293" width="117" height="20.5"/>
+                                <rect key="frame" x="20" y="288" width="117" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0N-FJ-vJa">
-                                <rect key="frame" x="16" y="518" width="116" height="30"/>
+                                <rect key="frame" x="90" y="369.5" width="116" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Set Appointment"/>
                                 <connections>
@@ -238,21 +242,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Send To :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhU-Hm-pEl">
-                                <rect key="frame" x="58" y="331" width="72" height="20.5"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUa-UD-GzG">
-                                <rect key="frame" x="146" y="331" width="171" height="22"/>
+                                <rect key="frame" x="65" y="323" width="72" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kp9-ZQ-Axm">
-                                <rect key="frame" x="187" y="236" width="118" height="20.5"/>
+                                <rect key="frame" x="176" y="223" width="118" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUa-UD-GzG">
+                                <rect key="frame" x="176" y="323" width="171" height="22"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -297,14 +301,14 @@
                                             <rect key="frame" x="24" y="14" width="107" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCs-mT-JJx">
                                             <rect key="frame" x="145" y="14" width="442" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -368,7 +372,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZU-gj-rV9">
                                 <rect key="frame" x="28" y="262" width="176" height="104.5"/>
                                 <animations/>
-                                <state key="normal" backgroundImage="PROFESSor"/>
+                                <state key="normal" backgroundImage="prof@1"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPT-gv-gvY">
                                 <rect key="frame" x="396" y="262" width="176" height="104.5"/>
@@ -413,7 +417,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSJ-VU-vmR">
                                 <rect key="frame" x="212" y="149" width="176" height="105"/>
                                 <animations/>
-                                <state key="normal" title="Appointments" image="timetable-1"/>
+                                <state key="normal" title="Appointments" image="appointments"/>
                                 <connections>
                                     <segue destination="W8r-ke-Ax0" kind="show" id="gan-sQ-FNR"/>
                                 </connections>
@@ -431,7 +435,7 @@
                             </button>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.97194044502617805" green="0.78876408661893915" blue="0.6689215865822542" alpha="0.39087433510638298" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Igr-Vx-vf1" firstAttribute="leading" secondItem="BIl-vb-KNA" secondAttribute="trailing" constant="8" id="1fl-3J-Az1"/>
                             <constraint firstItem="EtO-uX-35a" firstAttribute="width" secondItem="Kwt-7H-tqi" secondAttribute="width" id="32K-75-4V3"/>
@@ -629,14 +633,14 @@
         <image name="Browse-Catalog-icon-1" width="121" height="114"/>
         <image name="FOODNRME-1" width="280" height="280"/>
         <image name="LOSTNDFOUND-1" width="512" height="512"/>
-        <image name="PROFESSor" width="121" height="121"/>
         <image name="SELLORBUYS-1" width="512" height="512"/>
         <image name="VECTOR1X" width="121" height="121"/>
-        <image name="broadcast" width="300" height="300"/>
+        <image name="appointments" width="359" height="359"/>
+        <image name="broadcast" width="359" height="359"/>
         <image name="building1X-1" width="121" height="121"/>
         <image name="compass1X-1" width="121" height="121"/>
+        <image name="prof@1" width="359" height="359"/>
         <image name="shuttle-1" width="121" height="121"/>
-        <image name="timetable-1" width="202" height="202"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tS8-E3-Z9z"/>
