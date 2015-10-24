@@ -68,6 +68,7 @@
 		B76BA9111BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAppoinmentAtheleticViewController.swift; sourceTree = "<group>"; };
 		B7FED58E1BB62D4C00F3FEB8 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtheleticViewController.swift; sourceTree = "<group>"; };
+		D129938F1BDB0B7700ABA2B7 /* GetJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,7 +110,9 @@
 		80AC77571BB343AE004E050C /* NJIT Student Guide */ = {
 			isa = PBXGroup;
 			children = (
-				04EC834D1BDAAC170018D535 /* Images */,
+				70496C721BDAD71D006E9019 /* VectorDetailControl.swift */,
+				70C2318B1BD97182003D7AA1 /* VectorControllerCell.swift */,
+				70C231891BD97029003D7AA1 /* VectorViewController.swift */,
 				80AC77581BB343AE004E050C /* AppDelegate.swift */,
 				80AC775A1BB343AE004E050C /* RootViewController.swift */,
 				80AC775C1BB343AE004E050C /* DataViewController.swift */,
@@ -194,7 +197,7 @@
 				TargetAttributes = {
 					80AC77541BB343AE004E050C = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = F48ZTW93WJ;
+						DevelopmentTeam = 635S95WM97;
 					};
 					80AC776C1BB343AE004E050C = {
 						CreatedOnToolsVersion = 7.0;
@@ -226,7 +229,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04EC834E1BDAAC170018D535 /* Images in Resources */,
 				80AC77671BB343AE004E050C /* LaunchScreen.storyboard in Resources */,
 				80AC77641BB343AE004E050C /* Assets.xcassets in Resources */,
 				80AC77621BB343AE004E050C /* Main.storyboard in Resources */,
@@ -252,6 +254,7 @@
 				0468EE831BC320010032AC7D /* DateSelectAtheleticViewController.swift in Sources */,
 				B7FED58F1BB62D4C00F3FEB8 /* ScheduleViewController.swift in Sources */,
 				80AC775B1BB343AE004E050C /* RootViewController.swift in Sources */,
+				70496C731BDAD71D006E9019 /* VectorDetailControl.swift in Sources */,
 				0435F1721BC4D703004B12F0 /* EurekaViewController.swift in Sources */,
 				B76BA9121BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift in Sources */,
 				80E9406A1BDBE5B4008814F1 /* profs.swift in Sources */,
@@ -261,6 +264,8 @@
 				047761951BC9BB4A00D98830 /* AcademicListViewController.swift in Sources */,
 				80AC775F1BB343AE004E050C /* ModelController.swift in Sources */,
 				0435F17A1BC4E27D004B12F0 /* EurekaTableControllerCell.swift in Sources */,
+				70C2318A1BD97029003D7AA1 /* VectorViewController.swift in Sources */,
+				70C2318C1BD97182003D7AA1 /* VectorControllerCell.swift in Sources */,
 				80AC775D1BB343AE004E050C /* DataViewController.swift in Sources */,
 				04D9A16C1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift in Sources */,
 				80AC77591BB343AE004E050C /* AppDelegate.swift in Sources */,
@@ -395,8 +400,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "NJIT Student Guide/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.arif.NJIT-Student-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "ravi.NJIT-Student-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -409,8 +415,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "NJIT Student Guide/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.arif.NJIT-Student-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "ravi.NJIT-Student-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
