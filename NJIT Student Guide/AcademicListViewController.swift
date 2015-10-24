@@ -17,27 +17,13 @@ class AcademicListViewController: UITableViewController {
     @IBOutlet var TblViewOutlet: UITableView!
     
     override func viewDidLoad() {
-        
-        self.refreshControl = UIRefreshControl()
-        self.refreshControl!.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl!.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
-        self.tableView.addSubview(refreshControl!)
-        
+   
         getJSON("https://web.njit.edu/~rb454/academiccalendar.php")
-        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-            self.TblViewOutlet.reloadData()
-        })
-     
-        super.viewDidLoad()
-      
-        TblViewOutlet.reloadData()
-         //print(infodata)
+      super.viewDidLoad()
 
     }
     
-    func refresh(sender:AnyObject?){
-        TblViewOutlet.reloadData()
-    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -65,22 +51,15 @@ class AcademicListViewController: UITableViewController {
                     i++
                     
                 }
-                self.TblViewOutlet.reloadData()
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.tableView.reloadData()
+                });
                 
             }catch _ as NSError{
                 
             }
-
-        
         })
-        
-       
         task1.resume()
-        
-        let task = NSURLSession.sharedSession().dataTaskWithRequest(request) {
-            data, response, error in
-                    }
-        task.resume()
         
     }
     
@@ -93,7 +72,7 @@ class AcademicListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    
+    9
         let cell  = tableView.dequeueReusableCellWithIdentifier("AcademicListCell", forIndexPath: indexPath) as! AcademicCell
         cell.textViewInfo.text = self.infodata[indexPath.row]
         cell.yearLabel.text = self.yeardata[indexPath.row]
