@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftHttp
 
 class VectorViewController: UITableViewController {
     
@@ -17,6 +18,7 @@ class VectorViewController: UITableViewController {
         
         var dataArr:[String]=[]
     var dataArrDate:[String]=[]
+    var dataArrDesc:[String]=[]
     var strIndex:Int=0
     
         func getJSON(url: String) {
@@ -28,8 +30,10 @@ class VectorViewController: UITableViewController {
                 for _ in jsonResult!
                 {
                     
-                    let dd=jsonResult![i];                    dataArr.append(dd["ArticleTitle"] as! String)
+                    let dd=jsonResult![i];
+                    dataArr.append(dd["ArticleTitle"] as! String)
                     dataArrDate.append(dd["ArticleDate"] as! String)
+                    dataArrDesc.append(dd["ArticleDesc"] as! String)
                     i = i+1
                     
                 }
@@ -58,9 +62,11 @@ class VectorViewController: UITableViewController {
         }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let iVal = segue.destinationViewController as! VectorDetailsController
-            iVal.intRow=strIndex
-            
+      if(segue.identifier == "VectorcellToDetails")
+      {
+        let iVal = segue.destinationViewController as! VectorDetailControl
+        iVal.strVector = dataArrDesc[strIndex]
+        }
         
     }
     
