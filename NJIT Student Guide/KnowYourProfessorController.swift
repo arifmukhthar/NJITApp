@@ -68,13 +68,13 @@ class KnowYourProfessorController: UITableViewController{
         
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+   /* override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let detailVC = self.storyboard?.instantiateViewControllerWithIdentifier("DetailViewController") as! KnowYourProfessorDetails
         detailVC.profName = profList[indexPath.row]
         detailVC.email = email[indexPath.row]
         
         self.presentViewController(detailVC, animated: true, completion: nil)
 
-    }
+    }*/
     
 }

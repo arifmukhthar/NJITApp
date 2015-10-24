@@ -442,6 +442,9 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="oIq-9z-ER0" kind="show" id="QfF-Wh-O8V"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -449,13 +452,11 @@
                             <outlet property="delegate" destination="0Bq-LP-ggs" id="SMo-WR-YgT"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="oIq-9z-ER0" kind="show" id="OGO-hm-jf2"/>
-                    </connections>
+                    <toolbarItems/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gA1-5v-hO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="763" y="402"/>
+            <point key="canvasLocation" x="48" y="-382"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eUP-MV-lAu">
@@ -809,6 +810,7 @@
                         <searchBar key="tableHeaderView" contentMode="redraw" id="p2R-ll-1B7">
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <animations/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="Tve-MJ-8ra" id="ibI-81-9PZ"/>
