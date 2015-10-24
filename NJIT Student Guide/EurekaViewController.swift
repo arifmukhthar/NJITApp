@@ -13,13 +13,16 @@ class EurekaViewController: UITableViewController {
     var item_images = [String]()
     var foundItemName = [String]()
     var itemDescription = [String]()
+    let rest = RestCall()
     
        override func viewDidLoad() {
         super.viewDidLoad()
-        profileNames = ["Sam reily","Ungappa Patel","LavadiKabal Punda","Thevidya payan"]
+      /*  profileNames = ["Sam reily","Ungappa Patel","LavadiKabal Punda","Thevidya payan"]
         item_images = ["broadcast.png","Browse-Catalog-icon-1.png","building1X-1.png","PROFESSor.png"]
         foundItemName = ["en pool","un pool","elarum pool","thiruttu pool"]
-        itemDescription = ["gdgdgdgdgdgd","gdgdgdgdgdgd","gdgdgdgdgdgd","gdgdgdgdgdgd"]
+        itemDescription = ["gdgdgdgdgdgd","gdgdgdgdgdgd","gdgdgdgdgdgd","gdgdgdgdgdgd"] */
+        
+        
         
             }
 
@@ -38,21 +41,20 @@ class EurekaViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return profileNames.count
+        return rest.profileName.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("eurekaTableCell", forIndexPath: indexPath)
             as! EurekaTableControllerCell
+        rest.updateLostAndFound()
         let row = indexPath.row
-        cell.profile_name.text = profileNames[row]
+        print(rest.profileName[row])
+        cell.profile_name.text = rest.profileName[row]
         cell._image.image = UIImage(named: item_images[row])
-        cell.found_item_name.text = foundItemName[row]
-        cell.item_description.text = itemDescription[row]
-        
-       
-
+        cell.found_item_name.text = rest.itemName[row]
+        cell.item_description.text = rest.itemDesc[row]
         return cell
     }
 
