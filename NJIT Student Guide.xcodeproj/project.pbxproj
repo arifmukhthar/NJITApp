@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0435F1721BC4D703004B12F0 /* EurekaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435F1711BC4D703004B12F0 /* EurekaViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		0435F17A1BC4E27D004B12F0 /* EurekaTableControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435F1791BC4E27D004B12F0 /* EurekaTableControllerCell.swift */; settings = {ASSET_TAGS = (); }; };
-		0435F17C1BC4E631004B12F0 /* EurekaTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435F17B1BC4E631004B12F0 /* EurekaTableCellModel.swift */; settings = {ASSET_TAGS = (); }; };
-		0468EE831BC320010032AC7D /* DateSelectAtheleticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468EE821BC320010032AC7D /* DateSelectAtheleticViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		047761951BC9BB4A00D98830 /* AcademicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047761941BC9BB4A00D98830 /* AcademicListViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		04D9A16C1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9A16B1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		040B86C41BCF506B008457AE /* AcademicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040B86C31BCF506B008457AE /* AcademicCell.swift */; };
+		0435F1721BC4D703004B12F0 /* EurekaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435F1711BC4D703004B12F0 /* EurekaViewController.swift */; };
+		0435F17A1BC4E27D004B12F0 /* EurekaTableControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435F1791BC4E27D004B12F0 /* EurekaTableControllerCell.swift */; };
+		0435F17C1BC4E631004B12F0 /* EurekaTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0435F17B1BC4E631004B12F0 /* EurekaTableCellModel.swift */; };
+		0468EE831BC320010032AC7D /* DateSelectAtheleticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468EE821BC320010032AC7D /* DateSelectAtheleticViewController.swift */; };
+		047761951BC9BB4A00D98830 /* AcademicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047761941BC9BB4A00D98830 /* AcademicListViewController.swift */; };
+		04D9A16C1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9A16B1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift */; };
+		70AFC52E1BDC18FB0029FF09 /* VectorControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC52B1BDC18FB0029FF09 /* VectorControllerCell.swift */; };
+		70AFC52F1BDC18FB0029FF09 /* VectorDetailControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC52C1BDC18FB0029FF09 /* VectorDetailControl.swift */; };
+		70AFC5301BDC18FB0029FF09 /* VectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */; };
+		80531D491BDB277000C054BE /* KnowYourProfessorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80531D481BDB277000C054BE /* KnowYourProfessorController.swift */; };
+		80531D4B1BDB2D6400C054BE /* KnowYourProfessorDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80531D4A1BDB2D6400C054BE /* KnowYourProfessorDetails.swift */; };
 		80AC77591BB343AE004E050C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC77581BB343AE004E050C /* AppDelegate.swift */; };
 		80AC775B1BB343AE004E050C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC775A1BB343AE004E050C /* RootViewController.swift */; };
 		80AC775D1BB343AE004E050C /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC775C1BB343AE004E050C /* DataViewController.swift */; };
@@ -38,12 +44,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040B86C31BCF506B008457AE /* AcademicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicCell.swift; sourceTree = "<group>"; };
 		0435F1711BC4D703004B12F0 /* EurekaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EurekaViewController.swift; sourceTree = "<group>"; };
 		0435F1791BC4E27D004B12F0 /* EurekaTableControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EurekaTableControllerCell.swift; sourceTree = "<group>"; };
 		0435F17B1BC4E631004B12F0 /* EurekaTableCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EurekaTableCellModel.swift; sourceTree = "<group>"; };
 		0468EE821BC320010032AC7D /* DateSelectAtheleticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSelectAtheleticViewController.swift; sourceTree = "<group>"; };
 		047761941BC9BB4A00D98830 /* AcademicListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicListViewController.swift; sourceTree = "<group>"; };
 		04D9A16B1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicCalendarTableViewController.swift; sourceTree = "<group>"; };
+		70AFC52B1BDC18FB0029FF09 /* VectorControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorControllerCell.swift; sourceTree = "<group>"; };
+		70AFC52C1BDC18FB0029FF09 /* VectorDetailControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorDetailControl.swift; sourceTree = "<group>"; };
+		70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorViewController.swift; sourceTree = "<group>"; };
+		80531D481BDB277000C054BE /* KnowYourProfessorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowYourProfessorController.swift; sourceTree = "<group>"; };
+		80531D4A1BDB2D6400C054BE /* KnowYourProfessorDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowYourProfessorDetails.swift; sourceTree = "<group>"; };
 		80AC77551BB343AE004E050C /* NJIT Student Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NJIT Student Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AC77581BB343AE004E050C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		80AC775A1BB343AE004E050C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +113,9 @@
 		80AC77571BB343AE004E050C /* NJIT Student Guide */ = {
 			isa = PBXGroup;
 			children = (
+				70AFC52B1BDC18FB0029FF09 /* VectorControllerCell.swift */,
+				70AFC52C1BDC18FB0029FF09 /* VectorDetailControl.swift */,
+				70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */,
 				80AC77581BB343AE004E050C /* AppDelegate.swift */,
 				80AC775A1BB343AE004E050C /* RootViewController.swift */,
 				80AC775C1BB343AE004E050C /* DataViewController.swift */,
@@ -112,13 +127,16 @@
 				80AC77601BB343AE004E050C /* Main.storyboard */,
 				04D9A16B1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift */,
 				047761941BC9BB4A00D98830 /* AcademicListViewController.swift */,
+				040B86C31BCF506B008457AE /* AcademicCell.swift */,
 				0468EE821BC320010032AC7D /* DateSelectAtheleticViewController.swift */,
 				B76BA9111BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift */,
-				B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */,
 				B7FED58E1BB62D4C00F3FEB8 /* ScheduleViewController.swift */,
 				80AC77631BB343AE004E050C /* Assets.xcassets */,
 				80AC77651BB343AE004E050C /* LaunchScreen.storyboard */,
 				80AC77681BB343AE004E050C /* Info.plist */,
+				B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */,
+				80531D481BDB277000C054BE /* KnowYourProfessorController.swift */,
+				80531D4A1BDB2D6400C054BE /* KnowYourProfessorDetails.swift */,
 			);
 			path = "NJIT Student Guide";
 			sourceTree = "<group>";
@@ -176,12 +194,13 @@
 		80AC774D1BB343AE004E050C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Fantastic4;
 				TargetAttributes = {
 					80AC77541BB343AE004E050C = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = F48ZTW93WJ;
+						DevelopmentTeam = 635S95WM97;
 					};
 					80AC776C1BB343AE004E050C = {
 						CreatedOnToolsVersion = 7.0;
@@ -233,12 +252,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70AFC52E1BDC18FB0029FF09 /* VectorControllerCell.swift in Sources */,
+				80531D4B1BDB2D6400C054BE /* KnowYourProfessorDetails.swift in Sources */,
+				040B86C41BCF506B008457AE /* AcademicCell.swift in Sources */,
 				0468EE831BC320010032AC7D /* DateSelectAtheleticViewController.swift in Sources */,
 				B7FED58F1BB62D4C00F3FEB8 /* ScheduleViewController.swift in Sources */,
 				80AC775B1BB343AE004E050C /* RootViewController.swift in Sources */,
 				0435F1721BC4D703004B12F0 /* EurekaViewController.swift in Sources */,
 				B76BA9121BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift in Sources */,
+				80531D491BDB277000C054BE /* KnowYourProfessorController.swift in Sources */,
 				B7FED5911BB6449F00F3FEB8 /* AtheleticViewController.swift in Sources */,
+				70AFC5301BDC18FB0029FF09 /* VectorViewController.swift in Sources */,
 				0435F17C1BC4E631004B12F0 /* EurekaTableCellModel.swift in Sources */,
 				047761951BC9BB4A00D98830 /* AcademicListViewController.swift in Sources */,
 				80AC775F1BB343AE004E050C /* ModelController.swift in Sources */,
@@ -246,6 +270,7 @@
 				80AC775D1BB343AE004E050C /* DataViewController.swift in Sources */,
 				D454F3821BCE28F0001C66E8 /* RestCall.swift in Sources */,
 				04D9A16C1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift in Sources */,
+				70AFC52F1BDC18FB0029FF09 /* VectorDetailControl.swift in Sources */,
 				80AC77591BB343AE004E050C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,8 +403,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "NJIT Student Guide/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.arif.NJIT-Student-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "ravi.NJIT-Student-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -392,8 +418,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "NJIT Student Guide/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.arif.NJIT-Student-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "ravi.NJIT-Student-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

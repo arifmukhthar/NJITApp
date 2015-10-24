@@ -9,7 +9,7 @@
 import UIKit
 
 class AcademicCalendarTableViewController: UITableViewController {
-
+    var l1 = [String]()
     var list = [String]()
     override func viewDidLoad() {
         getJSON("https://web.njit.edu/~rb454/academicyear.php")
@@ -23,7 +23,6 @@ class AcademicCalendarTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
     }
 
-    // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -33,7 +32,8 @@ class AcademicCalendarTableViewController: UITableViewController {
         return list.count
     }
     
-    func getJSON(url: String){
+    
+        func getJSON(url: String){
         let data = NSData(contentsOfURL: NSURL(string: url)!)
         
         do{
@@ -66,9 +66,9 @@ class AcademicCalendarTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
-        let destViewController = segue.destinationViewController as! AcademicListViewController
+        let destVC = segue.destinationViewController as! AcademicListViewController
         
-        destViewController.year = list[indexPath.row]
+        destVC.year = list[indexPath.row]
     }
     
 }
