@@ -191,7 +191,7 @@
 				TargetAttributes = {
 					80AC77541BB343AE004E050C = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = F48ZTW93WJ;
+						DevelopmentTeam = 635S95WM97;
 					};
 					80AC776C1BB343AE004E050C = {
 						CreatedOnToolsVersion = 7.0;
@@ -393,7 +393,7 @@
 				INFOPLIST_FILE = "NJIT Student Guide/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "arif.NJIT-Student-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "ravi.NJIT-Student-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -408,7 +408,7 @@
 				INFOPLIST_FILE = "NJIT Student Guide/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "arif.NJIT-Student-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "ravi.NJIT-Student-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
