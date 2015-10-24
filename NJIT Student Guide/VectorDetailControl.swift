@@ -17,9 +17,7 @@ class VectorDetailControl: UIViewController {
     var dataArrDesc = String()
     
     override func viewDidLoad() {
-        dataArrDesc = "Some Shit"
         super.viewDidLoad();
-      //  txtVector.text = strVector
         getJSON("https://web.njit.edu/~ts336/artDesc.php")
         
     }
@@ -37,16 +35,13 @@ class VectorDetailControl: UIViewController {
             do{
                 var i = 0
                 let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSArray
-                //print(json)
                 for _ in json! {
                     let dd = json![i]
                     self.dataArrDesc = dd["ArticleDesc"] as! String
-                    
                     i++
                     
                 }
                 
-                print(json)
                 dispatch_async(dispatch_get_main_queue(), {
                     self.txtVector.text=self.dataArrDesc
                     print(self.dataArrDesc)
