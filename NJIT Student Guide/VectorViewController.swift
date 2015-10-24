@@ -115,12 +115,13 @@ class VectorViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
          let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
-      if(segue.identifier == "VectorcellToDetails")
-      {
-        let iVal = segue.destinationViewController as! UINavigationController
-        let nextView = iVal.topViewController as! VectorDetailControl
-        nextView.strVector = dataArrId[indexPath.row]
-        }
+      //if(segue.identifier == "VectorcellToDetails")
+      //{
+        let iVal = segue.destinationViewController as! VectorDetailControl
+        //let nextView = iVal.topViewController as! VectorDetailControl
+        iVal.strVector = dataArrId[indexPath.row]
+        print("my shit\(dataArrId[indexPath.row])")
+        //}
         
     }
     

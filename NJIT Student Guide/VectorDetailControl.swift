@@ -46,7 +46,7 @@ class VectorDetailControl: UIViewController {
                     
                 }
                 
-
+                print(json)
                 dispatch_async(dispatch_get_main_queue(), {
                     self.txtVector.text=self.dataArrDesc
                     print(self.dataArrDesc)
