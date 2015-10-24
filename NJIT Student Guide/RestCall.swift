@@ -12,7 +12,6 @@ class RestCall {
     var itemDesc = [String]()
     var itemName = [String]()
     
-   
     func updateLostAndFound() {
         let getEndPoint: String = "https://web.njit.edu/~ts336/LostAndFound.php"
         let session = NSURLSession.sharedSession()
@@ -34,9 +33,7 @@ class RestCall {
                     self.itemName.append(data["foundItemName"] as! String)
                     i=i+1
                 }
-                
-                    print("\(self.profileName[0])")
-                
+               
                 
             }
             catch{

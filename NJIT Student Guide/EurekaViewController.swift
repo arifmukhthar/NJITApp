@@ -9,19 +9,18 @@
 import UIKit
 
 class EurekaViewController: UITableViewController {
-     var profileNames = [String]()
     var item_images = [String]()
-    var foundItemName = [String]()
-    var itemDescription = [String]()
-    let rest = RestCall()
+   
+    var profileName = [String]()
+    var itemDesc = [String]()
+    var itemName = [String]()
     
        override func viewDidLoad() {
-        super.viewDidLoad()
-      /*  profileNames = ["Sam reily","Ungappa Patel","LavadiKabal Punda","Thevidya payan"]
-        item_images = ["broadcast.png","Browse-Catalog-icon-1.png","building1X-1.png","PROFESSor.png"]
-        foundItemName = ["en pool","un pool","elarum pool","thiruttu pool"]
-        itemDescription = ["gdgdgdgdgdgd","gdgdgdgdgdgd","gdgdgdgdgdgd","gdgdgdgdgdgd"] */
         
+        getJSON("https://web.njit.edu/~ts336/LostAndFound.php")
+        super.viewDidLoad()
+        
+        item_images = ["broadcast.png","Browse-Catalog-icon-1.png","building1X-1.png","PROFESSor.png"]
         
         
             }
@@ -41,67 +40,54 @@ class EurekaViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return rest.profileName.count
+        return profileName.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("eurekaTableCell", forIndexPath: indexPath)
             as! EurekaTableControllerCell
-        rest.updateLostAndFound()
         let row = indexPath.row
-        print(rest.profileName[row])
-        cell.profile_name.text = rest.profileName[row]
+        cell.profile_name.text = self.profileName[row]
         cell._image.image = UIImage(named: item_images[row])
-        cell.found_item_name.text = rest.itemName[row]
-        cell.item_description.text = rest.itemDesc[row]
+        cell.found_item_name.text = self.itemName[row]
+        cell.item_description.text = self.itemDesc[row]
+        
+       
+
         return cell
     }
 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func getJSON(url: String) {
+        let data = NSData(contentsOfURL: NSURL(string: url)!)
+        do {
+            
+            let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSArray
+            var i = 0
+            for _ in jsonResult!
+            {
+                
+                let data=jsonResult![i];
+               
+                self.profileName.append(data["userName"] as! String)
+                self.itemDesc.append(data["itemDescription"] as! String)
+                self.itemName.append(data["foundItemName"] as! String)
+                
+                i = i+1
+                
+            }
+            print(jsonResult)
+            
+        } catch let error as NSError {
+            print(error)
+        }
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
+    
+    
+    
+ 
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
