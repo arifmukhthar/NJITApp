@@ -23,6 +23,8 @@ class VectorViewController: UITableViewController {
         var strIndex:Int=0
         var searchActive : Bool = false
         var filtered:[String] = []
+    var filteredDate:[String] = []
+    
 
     
     
@@ -52,6 +54,11 @@ class VectorViewController: UITableViewController {
             searchActive = false;
         } else {
             searchActive = true;
+            filteredDate.removeAll()
+            for item in filtered{
+                let indDataArr=dataArr.indexOf(item)
+                filteredDate.append(dataArrDate[indDataArr!])
+            }
         }
         self.tableView.reloadData()
         
@@ -78,7 +85,6 @@ class VectorViewController: UITableViewController {
                     i = i+1
                     
                 }
-                print(jsonResult)
                 
             } catch let error as NSError {
                 print(error)
@@ -98,7 +104,7 @@ class VectorViewController: UITableViewController {
             
             if(searchActive){
                 cellval.ArticleTitle.text = filtered[indexPath.row]
-                  cellval.ArticleDate.text = filtered[indexPath.row]
+                  cellval.ArticleDate.text = filteredDate[indexPath.row]
             } else {
                 
                 cellval.ArticleTitle.text=dataArr[indexPath.item]
@@ -115,12 +121,12 @@ class VectorViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
          let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
-      if(segue.identifier == "VectorcellToDetails")
-      {
-        let iVal = segue.destinationViewController as! UINavigationController
-        let nextView = iVal.topViewController as! VectorDetailControl
-        nextView.strVector = dataArrId[indexPath.row]
-        }
+      //if(segue.identifier == "VectorcellToDetails")
+      //{
+        let iVal = segue.destinationViewController as! VectorDetailControl
+        //let nextView = iVal.topViewController as! VectorDetailControl
+        iVal.strVector = dataArrId[indexPath.row]
+        //}
         
     }
     
