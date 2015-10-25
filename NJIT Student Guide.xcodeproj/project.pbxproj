@@ -17,6 +17,8 @@
 		70AFC52E1BDC18FB0029FF09 /* VectorControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC52B1BDC18FB0029FF09 /* VectorControllerCell.swift */; };
 		70AFC52F1BDC18FB0029FF09 /* VectorDetailControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC52C1BDC18FB0029FF09 /* VectorDetailControl.swift */; };
 		70AFC5301BDC18FB0029FF09 /* VectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */; };
+		70AFC5321BDC344C0029FF09 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC5311BDC344C0029FF09 /* ContactViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		70AFC5341BDC36B70029FF09 /* ContactCellControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC5331BDC36B70029FF09 /* ContactCellControl.swift */; settings = {ASSET_TAGS = (); }; };
 		80531D491BDB277000C054BE /* KnowYourProfessorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80531D481BDB277000C054BE /* KnowYourProfessorController.swift */; };
 		80531D4B1BDB2D6400C054BE /* KnowYourProfessorDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80531D4A1BDB2D6400C054BE /* KnowYourProfessorDetails.swift */; };
 		80AC77591BB343AE004E050C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC77581BB343AE004E050C /* AppDelegate.swift */; };
@@ -53,6 +55,8 @@
 		70AFC52B1BDC18FB0029FF09 /* VectorControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorControllerCell.swift; sourceTree = "<group>"; };
 		70AFC52C1BDC18FB0029FF09 /* VectorDetailControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorDetailControl.swift; sourceTree = "<group>"; };
 		70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorViewController.swift; sourceTree = "<group>"; };
+		70AFC5311BDC344C0029FF09 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		70AFC5331BDC36B70029FF09 /* ContactCellControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCellControl.swift; sourceTree = "<group>"; };
 		80531D481BDB277000C054BE /* KnowYourProfessorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowYourProfessorController.swift; sourceTree = "<group>"; };
 		80531D4A1BDB2D6400C054BE /* KnowYourProfessorDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowYourProfessorDetails.swift; sourceTree = "<group>"; };
 		80AC77551BB343AE004E050C /* NJIT Student Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NJIT Student Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +115,8 @@
 		80AC77571BB343AE004E050C /* NJIT Student Guide */ = {
 			isa = PBXGroup;
 			children = (
+				70AFC5311BDC344C0029FF09 /* ContactViewController.swift */,
+				70AFC5331BDC36B70029FF09 /* ContactCellControl.swift */,
 				70AFC52B1BDC18FB0029FF09 /* VectorControllerCell.swift */,
 				70AFC52C1BDC18FB0029FF09 /* VectorDetailControl.swift */,
 				70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */,
@@ -258,6 +264,8 @@
 				0435F1721BC4D703004B12F0 /* EurekaViewController.swift in Sources */,
 				B76BA9121BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift in Sources */,
 				80531D491BDB277000C054BE /* KnowYourProfessorController.swift in Sources */,
+				70AFC5321BDC344C0029FF09 /* ContactViewController.swift in Sources */,
+				70AFC5341BDC36B70029FF09 /* ContactCellControl.swift in Sources */,
 				B7FED5911BB6449F00F3FEB8 /* AtheleticViewController.swift in Sources */,
 				70AFC5301BDC18FB0029FF09 /* VectorViewController.swift in Sources */,
 				0435F17C1BC4E631004B12F0 /* EurekaTableCellModel.swift in Sources */,

@@ -13,7 +13,6 @@ class VectorViewController: UITableViewController {
         override func viewDidLoad() {
             super.viewDidLoad();
             getJSON("https://web.njit.edu/~ts336/arttitle.php")
-            
         }
         
     @IBOutlet weak var searchBar: UISearchBar!
@@ -23,9 +22,8 @@ class VectorViewController: UITableViewController {
         var strIndex:Int=0
         var searchActive : Bool = false
         var filtered:[String] = []
-    var filteredDate:[String] = []
-    
-
+        var filteredDate:[String] = []
+        var filteredId:[String] = []
     
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
@@ -52,12 +50,16 @@ class VectorViewController: UITableViewController {
         })
         if(filtered.count == 0){
             searchActive = false;
-        } else {
+        }
+        else {
             searchActive = true;
+        
             filteredDate.removeAll()
+            filteredId.removeAll()
             for item in filtered{
                 let indDataArr=dataArr.indexOf(item)
                 filteredDate.append(dataArrDate[indDataArr!])
+                filteredId.append(dataArrId[indDataArr!])
             }
         }
         self.tableView.reloadData()
@@ -104,7 +106,7 @@ class VectorViewController: UITableViewController {
             
             if(searchActive){
                 cellval.ArticleTitle.text = filtered[indexPath.row]
-                  cellval.ArticleDate.text = filteredDate[indexPath.row]
+                cellval.ArticleDate.text = filteredDate[indexPath.row]
             } else {
                 
                 cellval.ArticleTitle.text=dataArr[indexPath.item]
@@ -114,6 +116,11 @@ class VectorViewController: UITableViewController {
          
             return cellval
         }
+    override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
+        if(searchActive){
+     searchBar.resignFirstResponder()
+        }
+        }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         strIndex=indexPath.row
@@ -121,13 +128,15 @@ class VectorViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
          let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
-      //if(segue.identifier == "VectorcellToDetails")
-      //{
         let iVal = segue.destinationViewController as! VectorDetailControl
-        //let nextView = iVal.topViewController as! VectorDetailControl
+      
+        if(searchActive){
+            iVal.strVector = filteredId[indexPath.row]
+        }
+        else
+        {
         iVal.strVector = dataArrId[indexPath.row]
-        //}
-        
+        }
     }
     
     
