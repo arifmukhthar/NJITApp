@@ -13,16 +13,21 @@ class VectorDetailControl: UIViewController {
     
     @IBOutlet weak var txtVector: UITextView!
     
+    @IBOutlet weak var btnShare: UIButton!
     var strVector:String!
     var dataArrDesc = String()
     var dataArrTitle = String()
     
     @IBOutlet weak var lblArtTitle: UILabel!
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad();
         getJSON("https://web.njit.edu/~ts336/artDesc.php")
         
     }
+    
+
     
     func getJSON(url:String){
         

@@ -922,7 +922,16 @@
                             <constraint firstItem="fWY-OD-fLD" firstAttribute="top" secondItem="E3p-Hm-rBi" secondAttribute="top" constant="-84" id="yuC-LW-b7c"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="CYD-9x-tjG"/>
+                    <navigationItem key="navigationItem" id="CYD-9x-tjG">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="KcC-Hi-rua">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fwg-Rq-O9W">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Share"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="lblArtTitle" destination="fWY-OD-fLD" id="uIi-go-hz5"/>
                         <outlet property="txtVector" destination="E3p-Hm-rBi" id="rYb-JE-Vlg"/>
