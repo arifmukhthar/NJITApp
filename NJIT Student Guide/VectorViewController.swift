@@ -104,7 +104,7 @@ class VectorViewController: UITableViewController {
             let cellval = tableView.dequeueReusableCellWithIdentifier("customcell", forIndexPath: indexPath) as! VectorControllerCell
            
             
-            if(searchActive){
+            if(searchActive && filtered.count != 0){
                 cellval.ArticleTitle.text = filtered[indexPath.row]
                 cellval.ArticleDate.text = filteredDate[indexPath.row]
             } else {
@@ -116,11 +116,7 @@ class VectorViewController: UITableViewController {
          
             return cellval
         }
-    override func tableView(tableView: UITableView, didHighlightRowAtIndexPath indexPath: NSIndexPath) {
-        if(searchActive){
-     searchBar.resignFirstResponder()
-        }
-        }
+    
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         strIndex=indexPath.row
@@ -130,7 +126,7 @@ class VectorViewController: UITableViewController {
          let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
         let iVal = segue.destinationViewController as! VectorDetailControl
       
-        if(searchActive){
+        if(searchActive  && filtered.count != 0){
             iVal.strVector = filteredId[indexPath.row]
         }
         else
