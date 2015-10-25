@@ -108,6 +108,13 @@ class ContactViewController: UITableViewController {
         
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if(searchActive){
+
+        searchBar.resignFirstResponder()
+        }
+        }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellval = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath) as! ContactCellControl
         
@@ -123,7 +130,6 @@ class ContactViewController: UITableViewController {
             cellval.lblContactPhone.text=dataArrPhone[indexPath.item]
             cellval.lblContactMail.text=dataArrMail[indexPath.item]
         }
-        
         
         return cellval
     }
