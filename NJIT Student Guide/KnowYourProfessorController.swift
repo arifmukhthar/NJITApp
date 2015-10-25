@@ -10,6 +10,8 @@ import UIKit
 
 class KnowYourProfessorController: UITableViewController{
    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     var profName = [String]()
     var deptName = [String]()
     var address = [String]()
@@ -17,6 +19,8 @@ class KnowYourProfessorController: UITableViewController{
     var contact = [String]()
     var hours = [String]()
     var desc = [String]()
+   // var collegeID = [String]()
+    
     
     var filteredprofName = [String]()
     var filtereddeptName = [String]()
@@ -25,10 +29,10 @@ class KnowYourProfessorController: UITableViewController{
     var filteredcontact = [String]()
     var filteredhours = [String]()
     var filtereddesc = [String]()
+   // var filteredcollegeID = [String]()
 
     var searchActive : Bool = false
     var filtered:[String] = []
-    
     
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
@@ -37,7 +41,6 @@ class KnowYourProfessorController: UITableViewController{
     
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
         searchActive = false;
-       
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
@@ -55,7 +58,8 @@ class KnowYourProfessorController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         getJSON("https://web.njit.edu/~au56/kyp.php")
-       
+      
+       print(searchBar.selectedScopeButtonIndex)
         
     }
     
@@ -71,7 +75,7 @@ class KnowYourProfessorController: UITableViewController{
         }
         else{
             
-        return profName.count
+            return profName.count
         }
     }
     
@@ -94,10 +98,10 @@ class KnowYourProfessorController: UITableViewController{
                 contact.append(resultString["contact"] as! String)
                 hours.append(resultString["hours"] as! String)
                 desc.append(resultString["description"] as! String)
+             //   collegeID.append(resultString["collegeid"] as! String)
                 
                 i++
             }
-             print(JSONresult)
             
         }catch let error as NSError{
             print(error)
@@ -115,6 +119,7 @@ class KnowYourProfessorController: UITableViewController{
 
         } else {
             searchActive = true;
+            
             filteredaddress.removeAll()
             filteredcontact.removeAll()
             filtereddeptName.removeAll()
@@ -122,6 +127,7 @@ class KnowYourProfessorController: UITableViewController{
             filteredemail.removeAll()
             filteredhours.removeAll()
             filteredprofName.removeAll()
+          //  filteredcollegeID.removeAll()
             for item in filtered{
                 let inOriginalList = profName.indexOf(item)
                 filteredprofName.append(profName[inOriginalList!])
@@ -131,8 +137,10 @@ class KnowYourProfessorController: UITableViewController{
                 filtereddeptName.append(deptName[inOriginalList!])
                 filteredcontact.append(contact[inOriginalList!])
                 filteredaddress.append(address[inOriginalList!])
+        //        filteredcollegeID.append(collegeID[inOriginalList!])
             }
         }
+      
         self.tableView.reloadData()
         
     }
