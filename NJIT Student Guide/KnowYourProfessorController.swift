@@ -29,6 +29,7 @@ class KnowYourProfessorController: UITableViewController{
     
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
         searchActive = false;
+       
     }
     
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
@@ -37,6 +38,8 @@ class KnowYourProfessorController: UITableViewController{
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchActive = false;
+        searchBar.resignFirstResponder()
+       
     }
     
     
@@ -44,6 +47,7 @@ class KnowYourProfessorController: UITableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         getJSON("https://web.njit.edu/~au56/kyp.php")
+       
         
     }
     
@@ -55,6 +59,7 @@ class KnowYourProfessorController: UITableViewController{
         if(searchActive)
         {
             return filtered.count
+            
         }
         else{
             
@@ -99,6 +104,7 @@ class KnowYourProfessorController: UITableViewController{
         })
         if(filtered.count == 0){
             searchActive = false;
+
         } else {
             searchActive = true;
         }
@@ -111,8 +117,10 @@ class KnowYourProfessorController: UITableViewController{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
+       
         
         let destViewController = segue.destinationViewController as! KnowYourProfessorDetails
+        
         
         destViewController.profName = profName[indexPath.row]
         destViewController.deptName = deptName[indexPath.row]
@@ -135,6 +143,7 @@ class KnowYourProfessorController: UITableViewController{
         
         
         return Cell
+        
     }
     
 }
