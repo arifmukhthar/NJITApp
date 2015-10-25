@@ -476,7 +476,11 @@
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9w-YY-bfs">
                                 <rect key="frame" x="396" y="375" width="176" height="105"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Contacts" label=""/>
+                                <state key="normal" title="Contacts"/>
+                                <connections>
+                                    <segue destination="uWV-WO-HuE" kind="show" id="psy-qs-Dao"/>
+                                </connections>
                             </button>
                             <button contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwt-7H-tqi">
                                 <rect key="frame" x="28" y="149" width="176" height="105"/>
@@ -623,6 +627,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mul-Cc-Lmh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="929" y="442"/>
+        </scene>
+        <!--Contact View Controller-->
+        <scene sceneID="gdB-Ea-eJU">
+            <objects>
+                <tableViewController id="uWV-WO-HuE" customClass="ContactViewController" customModule="NJIT_Student_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="121" sectionHeaderHeight="28" sectionFooterHeight="28" id="MOu-tC-qwC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactCell" rowHeight="121" id="NLt-qc-Tfq" customClass="ContactCellControl" customModule="NJIT_Student_Guide" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="121"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NLt-qc-Tfq" id="Cim-H1-o3i">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ContactDept" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnK-jI-joA">
+                                            <rect key="frame" x="22" y="0.0" width="570" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                            <color key="textColor" red="0.97647064924240112" green="0.11372549831867218" blue="0.031372550874948502" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ContactEmail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9VU-fC-NCW">
+                                            <rect key="frame" x="22" y="91" width="570" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="HjH-4G-MbZ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ContactName" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLM-0M-Cea">
+                                            <rect key="frame" x="22" y="19" width="570" height="46"/>
+                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                            <color key="textColor" red="0.85098046064376831" green="0.15686275064945221" blue="0.062745101749897003" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ContactPhone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7O-kg-hvP">
+                                            <rect key="frame" x="22" y="68" width="570" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="Mn0-RT-A0v"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="R7O-kg-hvP" firstAttribute="leading" secondItem="vLM-0M-Cea" secondAttribute="leading" id="3Xl-ve-Z5s"/>
+                                        <constraint firstItem="9VU-fC-NCW" firstAttribute="top" secondItem="R7O-kg-hvP" secondAttribute="bottom" constant="2" id="Hmr-xy-HQQ"/>
+                                        <constraint firstItem="9VU-fC-NCW" firstAttribute="bottom" secondItem="Cim-H1-o3i" secondAttribute="bottomMargin" id="L6x-Kl-Xne"/>
+                                        <constraint firstItem="tnK-jI-joA" firstAttribute="leading" secondItem="Cim-H1-o3i" secondAttribute="leadingMargin" constant="14" id="OcF-i8-MME"/>
+                                        <constraint firstItem="vLM-0M-Cea" firstAttribute="trailing" secondItem="tnK-jI-joA" secondAttribute="trailing" id="QZE-dg-toz"/>
+                                        <constraint firstItem="R7O-kg-hvP" firstAttribute="top" secondItem="tnK-jI-joA" secondAttribute="bottom" constant="44" id="TSS-3H-Nwy"/>
+                                        <constraint firstItem="vLM-0M-Cea" firstAttribute="top" secondItem="Cim-H1-o3i" secondAttribute="topMargin" constant="11" id="UqM-Lg-0Nf"/>
+                                        <constraint firstItem="R7O-kg-hvP" firstAttribute="trailing" secondItem="9VU-fC-NCW" secondAttribute="trailing" id="a3Y-vZ-eGT"/>
+                                        <constraint firstItem="tnK-jI-joA" firstAttribute="leading" secondItem="vLM-0M-Cea" secondAttribute="leading" id="eD8-Yy-i3B"/>
+                                        <constraint firstItem="R7O-kg-hvP" firstAttribute="trailing" secondItem="vLM-0M-Cea" secondAttribute="trailing" id="icu-Eu-pxb"/>
+                                        <constraint firstItem="R7O-kg-hvP" firstAttribute="top" secondItem="vLM-0M-Cea" secondAttribute="bottom" constant="3" id="o4c-16-xEC"/>
+                                        <constraint firstItem="R7O-kg-hvP" firstAttribute="trailing" secondItem="Cim-H1-o3i" secondAttribute="trailingMargin" id="qX5-c6-Pck"/>
+                                        <constraint firstItem="9VU-fC-NCW" firstAttribute="leading" secondItem="R7O-kg-hvP" secondAttribute="leading" id="r8m-Sr-Qdq"/>
+                                        <constraint firstItem="tnK-jI-joA" firstAttribute="top" secondItem="Cim-H1-o3i" secondAttribute="top" id="yze-aE-VM9"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblContactDept" destination="tnK-jI-joA" id="E6g-cJ-gHz"/>
+                                    <outlet property="lblContactMail" destination="9VU-fC-NCW" id="vXp-Ye-uPe"/>
+                                    <outlet property="lblContactName" destination="vLM-0M-Cea" id="bX9-hE-Ll9"/>
+                                    <outlet property="lblContactPhone" destination="R7O-kg-hvP" id="ZbI-Ps-a1f"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uWV-WO-HuE" id="otA-5o-RwA"/>
+                            <outlet property="delegate" destination="uWV-WO-HuE" id="KG9-lX-OA0"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jM5-RB-S97" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906" y="811"/>
         </scene>
         <!--Eureka View Controller-->
         <scene sceneID="4ZN-Fm-gpK">
