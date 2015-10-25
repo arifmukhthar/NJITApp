@@ -29,6 +29,8 @@ class VectorDetailControl: UIViewController {
     
 
     
+    @IBAction func btnShare(sender: UIButton) {
+    }
     func getJSON(url:String){
         
         let request = NSMutableURLRequest(URL: NSURL(string: url)!)

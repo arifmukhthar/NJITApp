@@ -769,7 +769,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jM5-RB-S97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="906" y="811"/>
+            <point key="canvasLocation" x="892" y="1949"/>
         </scene>
         <!--Eureka View Controller-->
         <scene sceneID="4ZN-Fm-gpK">
@@ -919,6 +919,7 @@
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWY-OD-fLD">
                                 <rect key="frame" x="20" y="64" width="560" height="87"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -943,7 +944,11 @@
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fwg-Rq-O9W">
                                 <rect key="frame" x="447" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
                                 <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="btnShare:" destination="7fq-2H-QyW" eventType="touchUpInside" id="aaq-HU-7Gj"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -954,7 +959,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bGI-D0-0DF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1214" y="1241"/>
+            <point key="canvasLocation" x="1356" y="1261"/>
         </scene>
         <!--Vector View Controller-->
         <scene sceneID="v4o-dL-Vkx">
