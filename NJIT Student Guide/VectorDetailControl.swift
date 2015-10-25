@@ -30,6 +30,13 @@ class VectorDetailControl: UIViewController {
 
     
     @IBAction func btnShare(sender: UIButton) {
+        let acItem=self.dataArrTitle
+
+        let actvVC:UIActivityViewController = UIActivityViewController(activityItems: [acItem], applicationActivities: nil)
+        
+        self.presentViewController(actvVC, animated: true, completion: nil)
+        
+        
     }
     func getJSON(url:String){
         
