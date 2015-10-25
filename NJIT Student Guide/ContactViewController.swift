@@ -17,7 +17,7 @@ class ContactViewController: UITableViewController {
     }
     
     
-    @IBOutlet weak var searchBarContact: UISearchBar!
+    @IBOutlet weak var searchBar: UISearchBar!
     var dataArrDept:[String]=[]
     var dataArrName:[String]=[]
     var dataArrMail:[String]=[]
@@ -26,6 +26,8 @@ class ContactViewController: UITableViewController {
     var searchActive : Bool = false
     var filtered:[String] = []
     var filteredName:[String] = []
+    var filteredMail:[String] = []
+    var filteredPhone:[String] = []
     
     
     
@@ -57,9 +59,14 @@ class ContactViewController: UITableViewController {
         } else {
             searchActive = true;
             filteredName.removeAll()
+            filteredPhone.removeAll()
+            filteredMail.removeAll()
             for item in filtered{
                 let indDataArr=dataArrDept.indexOf(item)
                 filteredName.append(dataArrName[indDataArr!])
+                filteredPhone.append(dataArrPhone[indDataArr!])
+                filteredMail.append(dataArrMail[indDataArr!])
+                
             }
         }
         self.tableView.reloadData()
@@ -104,12 +111,11 @@ class ContactViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellval = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath) as! ContactCellControl
         
-        
         if(searchActive){
             cellval.lblContactDept.text = filtered[indexPath.row]
             cellval.lblContactName.text = filteredName[indexPath.row]
-            cellval.lblContactPhone.text = filteredName[indexPath.row]
-            cellval.lblContactMail.text = filteredName[indexPath.row]
+            cellval.lblContactPhone.text = filteredPhone[indexPath.row]
+            cellval.lblContactMail.text = filteredMail[indexPath.row]
         } else {
             
             cellval.lblContactDept.text=dataArrDept[indexPath.item]
