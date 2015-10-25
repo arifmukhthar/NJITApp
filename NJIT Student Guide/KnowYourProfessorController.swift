@@ -154,7 +154,7 @@ class KnowYourProfessorController: UITableViewController{
         
         let destViewController = segue.destinationViewController as! KnowYourProfessorDetails
         
-        if(searchActive)
+        if(searchActive && filtered.count != 0)
         {
             destViewController.profName = filteredprofName[indexPath.row]
             destViewController.deptName = filtereddeptName[indexPath.row]
@@ -180,10 +180,13 @@ class KnowYourProfessorController: UITableViewController{
         
         let Cell = self.tableView.dequeueReusableCellWithIdentifier("Cello", forIndexPath: indexPath) as UITableViewCell
         
-        if(searchActive){
+        if(searchActive && filtered.count != 0){
             Cell.textLabel?.text = filtered[indexPath.row]
+            Cell.textLabel?.textColor = UIColor.whiteColor()
+            
         } else {
             Cell.textLabel?.text = profName[indexPath.row]
+            Cell.textLabel?.textColor = UIColor.whiteColor()
         }
         
         
