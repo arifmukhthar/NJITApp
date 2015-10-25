@@ -121,7 +121,18 @@ class KnowYourProfessorController: UITableViewController{
         
         let destViewController = segue.destinationViewController as! KnowYourProfessorDetails
         
-        
+        if(searchActive)
+        {
+            destViewController.profName = filtered[indexPath.row]
+            destViewController.deptName = filtered[indexPath.row]
+            destViewController.address = filtered[indexPath.row]
+            destViewController.email = filtered[indexPath.row]
+            destViewController.contact = filtered[indexPath.row]
+            destViewController.hours = filtered[indexPath.row]
+            destViewController.desc = filtered[indexPath.row]
+        }
+        else
+        {
         destViewController.profName = profName[indexPath.row]
         destViewController.deptName = deptName[indexPath.row]
         destViewController.address = address[indexPath.row]
@@ -129,6 +140,7 @@ class KnowYourProfessorController: UITableViewController{
         destViewController.contact = contact[indexPath.row]
         destViewController.hours = hours[indexPath.row]
         destViewController.desc = desc[indexPath.row]
+        }
         
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
