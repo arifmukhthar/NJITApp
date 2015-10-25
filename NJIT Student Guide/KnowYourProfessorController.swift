@@ -17,6 +17,14 @@ class KnowYourProfessorController: UITableViewController{
     var contact = [String]()
     var hours = [String]()
     var desc = [String]()
+    
+    var filteredprofName = [String]()
+    var filtereddeptName = [String]()
+    var filteredaddress = [String]()
+    var filteredemail = [String]()
+    var filteredcontact = [String]()
+    var filteredhours = [String]()
+    var filtereddesc = [String]()
 
     var searchActive : Bool = false
     var filtered:[String] = []
@@ -107,6 +115,23 @@ class KnowYourProfessorController: UITableViewController{
 
         } else {
             searchActive = true;
+            filteredaddress.removeAll()
+            filteredcontact.removeAll()
+            filtereddeptName.removeAll()
+            filtereddesc.removeAll()
+            filteredemail.removeAll()
+            filteredhours.removeAll()
+            filteredprofName.removeAll()
+            for item in filtered{
+                let inOriginalList = profName.indexOf(item)
+                filteredprofName.append(profName[inOriginalList!])
+                filteredhours.append(hours[inOriginalList!])
+                filteredemail.append(email[inOriginalList!])
+                filtereddesc.append(desc[inOriginalList!])
+                filtereddeptName.append(deptName[inOriginalList!])
+                filteredcontact.append(contact[inOriginalList!])
+                filteredaddress.append(address[inOriginalList!])
+            }
         }
         self.tableView.reloadData()
         
@@ -123,13 +148,13 @@ class KnowYourProfessorController: UITableViewController{
         
         if(searchActive)
         {
-            destViewController.profName = filtered[indexPath.row]
-            destViewController.deptName = filtered[indexPath.row]
-            destViewController.address = filtered[indexPath.row]
-            destViewController.email = filtered[indexPath.row]
-            destViewController.contact = filtered[indexPath.row]
-            destViewController.hours = filtered[indexPath.row]
-            destViewController.desc = filtered[indexPath.row]
+            destViewController.profName = filteredprofName[indexPath.row]
+            destViewController.deptName = filtereddeptName[indexPath.row]
+            destViewController.address = filteredaddress[indexPath.row]
+            destViewController.email = filteredemail[indexPath.row]
+            destViewController.contact = filteredcontact[indexPath.row]
+            destViewController.hours = filteredhours[indexPath.row]
+            destViewController.desc = filtereddesc[indexPath.row]
         }
         else
         {
