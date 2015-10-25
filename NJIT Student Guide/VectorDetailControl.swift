@@ -15,7 +15,9 @@ class VectorDetailControl: UIViewController {
     
     var strVector:String!
     var dataArrDesc = String()
+    var dataArrTitle = String()
     
+    @IBOutlet weak var lblArtTitle: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad();
         getJSON("https://web.njit.edu/~ts336/artDesc.php")
@@ -38,14 +40,17 @@ class VectorDetailControl: UIViewController {
                 for _ in json! {
                     let dd = json![i]
                     self.dataArrDesc = dd["ArticleDesc"] as! String
+                    self.dataArrTitle = dd["ArticleTitle"] as! String
+                    
                     i++
                     
                 }
                 
                 dispatch_async(dispatch_get_main_queue(), {
                     self.txtVector.text=self.dataArrDesc
-                    print(self.dataArrDesc)
+                    self.lblArtTitle.text=self.dataArrTitle
                     self.txtVector.reloadInputViews()
+                    self.lblArtTitle.reloadInputViews()
                 });
                 
             }catch _ as NSError{
