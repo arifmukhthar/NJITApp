@@ -11,23 +11,40 @@ import UIKit
 class KnowYourProfessorDetails: UIViewController {
     
     @IBOutlet weak var nameField: UILabel!
-    
+    @IBOutlet weak var deptField: UILabel!
+    @IBOutlet weak var addressField: UILabel!
     @IBOutlet weak var emailField: UILabel!
+    @IBOutlet weak var contactField: UILabel!
+    @IBOutlet weak var hoursField: UILabel!
+    @IBOutlet weak var descriptionField: UILabel!
+    
     
     
     
     var profName = String()
+    var deptName = String()
+    var address = String()
     var email = String()
+    var contact = String()
+    var hours = String()
+    var desc = String()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //detailImage.image = UIImage(named: imageDetail)
+
         
         nameField.text = profName
+        deptField.text = deptName
+        addressField.text = address
         emailField.text = email
+        contactField.text = contact
+        hoursField.text = hours
+        descriptionField.text = desc
         
-        // Do any additional setup after loading the view.
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
