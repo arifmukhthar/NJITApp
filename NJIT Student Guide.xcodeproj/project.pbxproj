@@ -122,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D13482581BDD9DBE00909A1B /* Images */,
+				70AFC5331BDC36B70029FF09 /* ContactCellControl.swift */,
 				70AFC52B1BDC18FB0029FF09 /* VectorControllerCell.swift */,
 				70AFC52C1BDC18FB0029FF09 /* VectorDetailControl.swift */,
 				70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */,
