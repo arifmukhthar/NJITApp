@@ -19,6 +19,7 @@
 		70AFC5301BDC18FB0029FF09 /* VectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */; };
 		70AFC5321BDC344C0029FF09 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC5311BDC344C0029FF09 /* ContactViewController.swift */; };
 		70AFC5341BDC36B70029FF09 /* ContactCellControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC5331BDC36B70029FF09 /* ContactCellControl.swift */; };
+		802C84201BDDA57B007D775B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802C841F1BDDA57B007D775B /* ViewController.swift */; };
 		80531D491BDB277000C054BE /* KnowYourProfessorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80531D481BDB277000C054BE /* KnowYourProfessorController.swift */; };
 		80531D4B1BDB2D6400C054BE /* KnowYourProfessorDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80531D4A1BDB2D6400C054BE /* KnowYourProfessorDetails.swift */; };
 		80AC77591BB343AE004E050C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC77581BB343AE004E050C /* AppDelegate.swift */; };
@@ -57,6 +58,7 @@
 		70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorViewController.swift; sourceTree = "<group>"; };
 		70AFC5311BDC344C0029FF09 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		70AFC5331BDC36B70029FF09 /* ContactCellControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCellControl.swift; sourceTree = "<group>"; };
+		802C841F1BDDA57B007D775B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		80531D481BDB277000C054BE /* KnowYourProfessorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowYourProfessorController.swift; sourceTree = "<group>"; };
 		80531D4A1BDB2D6400C054BE /* KnowYourProfessorDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnowYourProfessorDetails.swift; sourceTree = "<group>"; };
 		80AC77551BB343AE004E050C /* NJIT Student Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NJIT Student Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +142,7 @@
 				70AFC5311BDC344C0029FF09 /* ContactViewController.swift */,
 				80531D481BDB277000C054BE /* KnowYourProfessorController.swift */,
 				80531D4A1BDB2D6400C054BE /* KnowYourProfessorDetails.swift */,
+				802C841F1BDDA57B007D775B /* ViewController.swift */,
 			);
 			path = "NJIT Student Guide";
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				80531D4B1BDB2D6400C054BE /* KnowYourProfessorDetails.swift in Sources */,
 				040B86C41BCF506B008457AE /* AcademicCell.swift in Sources */,
 				0468EE831BC320010032AC7D /* DateSelectAtheleticViewController.swift in Sources */,
+				802C84201BDDA57B007D775B /* ViewController.swift in Sources */,
 				B7FED58F1BB62D4C00F3FEB8 /* ScheduleViewController.swift in Sources */,
 				80AC775B1BB343AE004E050C /* RootViewController.swift in Sources */,
 				0435F1721BC4D703004B12F0 /* EurekaViewController.swift in Sources */,
