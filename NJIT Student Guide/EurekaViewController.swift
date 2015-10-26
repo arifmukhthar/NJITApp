@@ -7,22 +7,34 @@
 //
 
 import UIKit
+import MessageUI
 
-class EurekaViewController: UITableViewController {
+
+
+class EurekaViewController: UITableViewController,MFMailComposeViewControllerDelegate{
+    
+    
     var item_images = [String]()
+    
    
     var profileName = [String]()
     var itemDesc = [String]()
     var itemName = [String]()
+    var userEmail = [String]()
+    let rest = RestCall()
+  
     
        override func viewDidLoad() {
         
-        getJSON("https://web.njit.edu/~ts336/LostAndFound.php")
+        rest.getJSON("https://web.njit.edu/~ts336/LostAndFound.php")
         super.viewDidLoad()
         
-        item_images = ["broadcast.png","Browse-Catalog-icon-1.png","building1X-1.png","PROFESSor.png"]
+        item_images = ["broadcast.png","Browse-Catalog-icon-1.png","building1X-1.png","PROFESSor.png","broadcast.png"]
         
-        
+        let PostButton : UIBarButtonItem = UIBarButtonItem(title: "Post", style: UIBarButtonItemStyle.Plain, target: self, action:Selector("popToPost:"))
+       
+       
+        self.navigationItem.rightBarButtonItem = PostButton
             }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +52,7 @@ class EurekaViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return profileName.count
+        return rest.profileName.count
     }
 
     
@@ -48,46 +60,68 @@ class EurekaViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("eurekaTableCell", forIndexPath: indexPath)
             as! EurekaTableControllerCell
         let row = indexPath.row
-        cell.profile_name.text = self.profileName[row]
+        cell.profile_name.text = rest.profileName[row]
         cell._image.image = UIImage(named: item_images[row])
-        cell.found_item_name.text = self.itemName[row]
-        cell.item_description.text = self.itemDesc[row]
+        cell.found_item_name.text = rest.itemName[row]
+        cell.item_Description.text = rest.itemDesc[row]
+        
         
        
 
         return cell
     }
+    
+   
 
     
-    func getJSON(url: String) {
-        let data = NSData(contentsOfURL: NSURL(string: url)!)
-        do {
-            
-            let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSArray
-            var i = 0
-            for _ in jsonResult!
-            {
-                
-                let data=jsonResult![i];
-               
-                self.profileName.append(data["userName"] as! String)
-                self.itemDesc.append(data["itemDescription"] as! String)
-                self.itemName.append(data["foundItemName"] as! String)
-                
-                i = i+1
-                
-            }
-            print(jsonResult)
-            
-        } catch let error as NSError {
-            print(error)
+    
+    
+    @IBAction func LostButtonSendEmail(sender: AnyObject) {
+        
+       
+        let mailComposeViewController = configuredMailComposeViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            self.showSendMailErrorAlert()
         }
     }
-
+    
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+        
+        mailComposerVC.setToRecipients(["someone@somewhere.com"])
+        mailComposerVC.setSubject("Lost item in NJIT")
+                
+        return mailComposerVC
+    }
+    
+    func showSendMailErrorAlert() {
+        let sendMailErrorAlert = UIAlertController(title: "Title", message: "Message",preferredStyle:.Alert)
+        
+        let okAction = UIAlertAction(title:"OK",style:.Cancel){(action) in }
+        
+        sendMailErrorAlert.addAction(okAction)
+        
+        self.presentViewController(sendMailErrorAlert, animated: true){
+                
+            }
+    }
     
     
     
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
  
-
+    func popToPost(sender: UIBarButtonItem!) {
+        self.performSegueWithIdentifier("toPost", sender: self)
+    }
 
 }
+
+
+
+

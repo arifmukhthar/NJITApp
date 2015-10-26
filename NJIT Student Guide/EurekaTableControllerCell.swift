@@ -13,5 +13,6 @@ class EurekaTableControllerCell: UITableViewCell {
 
     @IBOutlet weak var _image: UIImageView!
     @IBOutlet weak var found_item_name: UILabel!
-    @IBOutlet weak var item_description: UILabel!
+  
+    @IBOutlet weak var item_Description: UITextView!
 }
