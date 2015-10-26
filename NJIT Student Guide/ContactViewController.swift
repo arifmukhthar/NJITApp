@@ -22,12 +22,15 @@ class ContactViewController: UITableViewController {
     var dataArrName:[String]=[]
     var dataArrMail:[String]=[]
     var dataArrPhone:[String]=[]
+    var dataArrCall:[String]=[]
+    
     var strIndex:Int=0
     var searchActive : Bool = false
     var filtered:[String] = []
     var filteredName:[String] = []
     var filteredMail:[String] = []
     var filteredPhone:[String] = []
+    var filteredCall:[String] = []
     
     
     
@@ -63,11 +66,13 @@ class ContactViewController: UITableViewController {
             filteredName.removeAll()
             filteredPhone.removeAll()
             filteredMail.removeAll()
+            filteredCall.removeAll()
             for item in filtered{
                 let indDataArr=dataArrDept.indexOf(item)
                 filteredName.append(dataArrName[indDataArr!])
                 filteredPhone.append(dataArrPhone[indDataArr!])
                 filteredMail.append(dataArrMail[indDataArr!])
+                filteredCall.append(dataArrCall[indDataArr!])
                 
             }
         }
@@ -94,6 +99,7 @@ class ContactViewController: UITableViewController {
                 dataArrName.append(dd["ContactPerson"] as! String)
                 dataArrMail.append(dd["ContactEMail"] as! String)
                 dataArrPhone.append(dd["ContactNumber"] as! String)
+                dataArrCall.append(dd["CallContact"] as! String)
                 i = i+1
                 
             }
@@ -112,24 +118,35 @@ class ContactViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     
-        let cellval = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath) as! ContactCellControl
-        
+    //    let cellval = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath) as! ContactCellControl
+        let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
         var strPhone = ""
+        
+        
+        
         if(searchActive){
             searchBar.resignFirstResponder()
-            strPhone = filteredPhone[indexPath.row]
+            strPhone = filteredCall[indexPath.row]
         }
         else
         {
-            strPhone = dataArrPhone[indexPath.row]
+            strPhone = dataArrCall[indexPath.row]
         }
         
+        var myNSString = strPhone as NSString
         
+        myNSString = myNSString.substringWithRange(NSRange(location: 0, length: 10))
+        strPhone=(myNSString as String)
+        
+        
+        strPhone="tell://"+strPhone
         print(strPhone)
-        //var url:NSURL = NSURL(string: "")!
-        //UIApplication.sharedApplication().openURL(url)
+        let url:NSURL = NSURL(string: strPhone)!
+        UIApplication.sharedApplication().openURL(url)
         
         }
+    
+
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellval = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath) as! ContactCellControl
