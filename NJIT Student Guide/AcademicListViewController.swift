@@ -79,6 +79,7 @@ class AcademicListViewController: UITableViewController {
         cell.textViewInfo.text = self.infodata[indexPath.row]
         cell.yearLabel.text = self.yeardata[indexPath.row]
         cell.dayLabel.text = self.daydata[indexPath.row]
+        
         print(self.yeardata[indexPath.row])
         return cell
     }

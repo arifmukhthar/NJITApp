@@ -139,7 +139,7 @@ class ContactViewController: UITableViewController {
         strPhone=(myNSString as String)
         
         
-        strPhone="tell://"+strPhone
+        strPhone="tel://"+strPhone
         print(strPhone)
         let url:NSURL = NSURL(string: strPhone)!
         UIApplication.sharedApplication().openURL(url)

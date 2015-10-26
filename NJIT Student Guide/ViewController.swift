@@ -36,12 +36,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
 
-public func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+internal func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
 {
     return items.count
     }
     
-    public func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    internal func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         cell.textLabel?.text = items[indexPath.row]
