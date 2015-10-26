@@ -13,17 +13,31 @@ class VectorDetailControl: UIViewController {
     
     @IBOutlet weak var txtVector: UITextView!
     
+    @IBOutlet weak var btnShare: UIButton!
     var strVector:String!
     var dataArrDesc = String()
+    var dataArrTitle = String()
+    
+    @IBOutlet weak var lblArtTitle: UILabel!
     
     override func viewDidLoad() {
-        dataArrDesc = "Some Shit"
+        
         super.viewDidLoad();
-      //  txtVector.text = strVector
         getJSON("https://web.njit.edu/~ts336/artDesc.php")
         
     }
     
+
+    
+    @IBAction func btnShare(sender: UIButton) {
+        let acItem=self.dataArrTitle
+
+        let actvVC:UIActivityViewController = UIActivityViewController(activityItems: [acItem], applicationActivities: nil)
+        
+        self.presentViewController(actvVC, animated: true, completion: nil)
+        
+        
+    }
     func getJSON(url:String){
         
         let request = NSMutableURLRequest(URL: NSURL(string: url)!)
@@ -37,20 +51,20 @@ class VectorDetailControl: UIViewController {
             do{
                 var i = 0
                 let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSArray
-                //print(json)
                 for _ in json! {
                     let dd = json![i]
                     self.dataArrDesc = dd["ArticleDesc"] as! String
+                    self.dataArrTitle = dd["ArticleTitle"] as! String
                     
                     i++
                     
                 }
                 
-                print(json)
                 dispatch_async(dispatch_get_main_queue(), {
                     self.txtVector.text=self.dataArrDesc
-                    print(self.dataArrDesc)
+                    self.lblArtTitle.text=self.dataArrTitle
                     self.txtVector.reloadInputViews()
+                    self.lblArtTitle.reloadInputViews()
                 });
                 
             }catch _ as NSError{
