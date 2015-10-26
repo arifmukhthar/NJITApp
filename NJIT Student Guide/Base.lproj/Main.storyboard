@@ -678,11 +678,12 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.60784313729999995" green="0.070588235289999995" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="Txh-Xs-nEi">
                             <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <animations/>
+                            <color key="barTintColor" red="0.60784313729999995" green="0.070588235289999995" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="uWV-WO-HuE" id="21Q-xO-7rj"/>
@@ -732,6 +733,7 @@
                                         </label>
                                     </subviews>
                                     <animations/>
+                                    <color key="backgroundColor" red="0.60784313729999995" green="0.070588235289999995" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="R7O-kg-hvP" firstAttribute="leading" secondItem="vLM-0M-Cea" secondAttribute="leading" id="3Xl-ve-Z5s"/>
                                         <constraint firstItem="9VU-fC-NCW" firstAttribute="top" secondItem="R7O-kg-hvP" secondAttribute="bottom" constant="2" id="Hmr-xy-HQQ"/>
@@ -750,6 +752,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.070588235289999995" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="lblContactDept" destination="tnK-jI-joA" id="E6g-cJ-gHz"/>
                                     <outlet property="lblContactMail" destination="9VU-fC-NCW" id="vXp-Ye-uPe"/>

@@ -34,6 +34,7 @@ class ContactViewController: UITableViewController {
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         searchActive = true;
+        
     }
     
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
@@ -46,6 +47,7 @@ class ContactViewController: UITableViewController {
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchActive = false;
+        
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
@@ -109,10 +111,24 @@ class ContactViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+        let cellval = tableView.dequeueReusableCellWithIdentifier("ContactCell", forIndexPath: indexPath) as! ContactCellControl
+        
+        var strPhone = ""
         if(searchActive){
-
-        searchBar.resignFirstResponder()
+            searchBar.resignFirstResponder()
+            strPhone = filteredPhone[indexPath.row]
         }
+        else
+        {
+            strPhone = dataArrPhone[indexPath.row]
+        }
+        
+        
+        print(strPhone)
+        //var url:NSURL = NSURL(string: "")!
+        //UIApplication.sharedApplication().openURL(url)
+        
         }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
