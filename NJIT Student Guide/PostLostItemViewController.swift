@@ -30,7 +30,9 @@ class PostLostItemViewController: UIViewController {
     
     
     @IBAction func Save(sender: AnyObject) {
+        //
         postJSON(userName.text!,useremail: userEmail.text!,itemname: ItemName.text!,itemdesc: itemDesc.text!)
+        
     }
 
     /*
@@ -42,16 +44,26 @@ class PostLostItemViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
+    //
     func postJSON(username: String!,useremail: String!,itemname: String!,itemdesc: String!) {
         let myUrl = NSURL(string: "https://web.njit.edu/~ss2773/postlostfound.php")
         let request = NSMutableURLRequest(URL:myUrl!)
         request.HTTPMethod = "POST"
-        let postString = "'username =\(username)&useremail=\(useremail)&itemname=\(itemname)&itemdesc=\(itemdesc)'"
+        let postString = "username='\(username)'&useremail='\(useremail)'&itemname='\(itemname)'&itemdesc='\(itemdesc)'"
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request,completionHandler: {data,response, error ->
             Void in
-            print("data: \(data)")
+            //print("data: \(data)")
+            
+            do{
+    
+                let json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSArray
+                //print(json)
+                print(json)
+            }catch _ as NSError{
+                
+            }
+
 
        
         })
