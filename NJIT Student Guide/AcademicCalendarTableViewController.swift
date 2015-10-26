@@ -59,7 +59,7 @@ class AcademicCalendarTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AcademicCell", forIndexPath: indexPath) as UITableViewCell
         cell.textLabel?.text = list[indexPath.row]
-
+        cell.textLabel?.textColor = UIColor.whiteColor()
 
         return cell
     }

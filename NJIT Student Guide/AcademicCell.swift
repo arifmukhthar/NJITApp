@@ -11,8 +11,8 @@ import UIKit
 class AcademicCell: UITableViewCell {
     
     
-    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var textViewInfo: UITextView!
     @IBOutlet weak var yearLabel: UILabel!
-    
+    @IBOutlet weak var dayLabel: UILabel!
 
 }

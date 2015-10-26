@@ -33,7 +33,7 @@ class ScheduleViewController: UITableViewController {
         
         let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
         
-        let DestViewController = segue.destinationViewController as! AtheleticViewController
+        let DestViewController = segue.destinationViewController as! AtheleticProfessorViewController
         
         DestViewController.scheduleChoice = appoinmentList[indexPath.row]
         
