@@ -49,12 +49,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jwd-dH-rez" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1685.9999999999998" y="444.99999999999994"/>
+            <point key="canvasLocation" x="1655" y="442"/>
         </scene>
-        <!--Atheletic View Controller-->
+        <!--Atheletic Professor View Controller-->
         <scene sceneID="LmW-ot-dgb">
             <objects>
-                <tableViewController id="r4d-9z-mP1" customClass="AtheleticViewController" customModule="NJIT_Student_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="r4d-9z-mP1" customClass="AtheleticProfessorViewController" customModule="NJIT_Student_Guide" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="CvO-si-J3n">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,7 +104,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="mfH-zp-Ghl" kind="show" id="VYe-Po-riu"/>
+                                    <segue destination="tLh-rL-ndO" kind="show" id="svn-8Y-ipo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -118,6 +118,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jN4-rm-Bq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2359" y="442.99999999999994"/>
+        </scene>
+        <!--Professor List View Controller-->
+        <scene sceneID="p4a-L8-hjJ">
+            <objects>
+                <tableViewController id="tLh-rL-ndO" customClass="ProfessorListViewController" customModule="NJIT_Student_Guide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="WhM-lP-dO8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfListCell" id="VBc-e1-0aJ">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VBc-e1-0aJ" id="N55-Ky-w66">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mfH-zp-Ghl" kind="show" id="qA1-Wj-G6u"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tLh-rL-ndO" id="5f4-cv-pnA"/>
+                            <outlet property="delegate" destination="tLh-rL-ndO" id="JNH-D7-McB"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u3m-8R-08v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3052" y="-291"/>
         </scene>
         <!--Set Appoinment Atheletic View Controller-->
         <scene sceneID="i1I-BQ-pqL">
@@ -165,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LaV-xc-J5y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3126" y="442"/>
+            <point key="canvasLocation" x="3052" y="444"/>
         </scene>
         <!--Date Select Atheletic View Controller-->
         <scene sceneID="jYV-YE-bgq">
@@ -452,6 +483,7 @@
                             <outlet property="delegate" destination="0Bq-LP-ggs" id="SMo-WR-YgT"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gA1-5v-hO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -477,7 +509,7 @@
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t9w-YY-bfs">
                                 <rect key="frame" x="396" y="375" width="176" height="105"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" backgroundImage="Contact"/>
                             </button>
                             <button contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwt-7H-tqi">
                                 <rect key="frame" x="28" y="149" width="176" height="105"/>
@@ -866,19 +898,20 @@
     </scenes>
     <resources>
         <image name="BANNER_TOP" width="840" height="69"/>
-        <image name="Browse-Catalog-icon-1" width="121" height="114"/>
-        <image name="FOODNRME-1" width="280" height="280"/>
-        <image name="LOSTNDFOUND-1" width="512" height="512"/>
-        <image name="SELLORBUYS-1" width="512" height="512"/>
-        <image name="VECTOR1X" width="121" height="121"/>
+        <image name="Browse-Catalog-icon-1" width="1025" height="1025"/>
+        <image name="Contact" width="1025" height="1025"/>
+        <image name="FOODNRME-1" width="1025" height="1025"/>
+        <image name="LOSTNDFOUND-1" width="1025" height="1025"/>
+        <image name="SELLORBUYS-1" width="1025" height="1025"/>
+        <image name="VECTOR1X" width="1025" height="1025"/>
         <image name="appointments" width="359" height="359"/>
         <image name="broadcast" width="359" height="359"/>
-        <image name="building1X-1" width="121" height="121"/>
+        <image name="building1X-1" width="1025" height="1025"/>
         <image name="compass1X-1" width="121" height="121"/>
         <image name="prof@1" width="359" height="359"/>
-        <image name="shuttle-1" width="121" height="121"/>
+        <image name="shuttle-1" width="1025" height="1025"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tS8-E3-Z9z"/>
+        <segue reference="qA1-Wj-G6u"/>
     </inferredMetricsTieBreakers>
 </document>

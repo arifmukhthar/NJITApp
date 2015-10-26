@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "building1X.png",
+      "filename" : "WHATSTHAT@1X.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "WHATSTHAT@2X.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "WHATSTHAT@3X.png",
       "scale" : "3x"
     }
   ],
