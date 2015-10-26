@@ -13,6 +13,7 @@ class AcademicListViewController: UITableViewController {
     var year = String()
       var infodata = [String]()
     var yeardata = [String]()
+    var daydata = [String]()
     
     @IBOutlet var TblViewOutlet: UITableView!
     
@@ -48,13 +49,14 @@ class AcademicListViewController: UITableViewController {
                     let dd = json![i]
                     self.infodata.append(dd["Information"] as! String)
                     self.yeardata.append(dd["Date"] as! String)
+                    self.daydata.append(dd["Day"] as! String)
                     i++
                     
                 }
                 dispatch_async(dispatch_get_main_queue(), {
                     self.tableView.reloadData()
                 });
-                
+                print(json)
             }catch _ as NSError{
                 
             }
@@ -76,6 +78,7 @@ class AcademicListViewController: UITableViewController {
         let cell  = tableView.dequeueReusableCellWithIdentifier("AcademicListCell", forIndexPath: indexPath) as! AcademicCell
         cell.textViewInfo.text = self.infodata[indexPath.row]
         cell.yearLabel.text = self.yeardata[indexPath.row]
+        cell.dayLabel.text = self.daydata[indexPath.row]
         print(self.yeardata[indexPath.row])
         return cell
     }

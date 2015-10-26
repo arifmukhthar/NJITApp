@@ -70,6 +70,7 @@ class ProfessorListViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("ProfListCell", forIndexPath: indexPath) as UITableViewCell
         cell.textLabel?.text = list[indexPath.row]
+        cell.textLabel?.textColor = UIColor.whiteColor()
         return cell
     }
     

@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "compass1X.png",
+      "filename" : "MAPS@1X.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "MAPS@2X.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "MAPS@3X.png",
       "scale" : "3x"
     }
   ],
