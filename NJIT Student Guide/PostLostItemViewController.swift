@@ -47,7 +47,7 @@ class PostLostItemViewController: UIViewController {
         let myUrl = NSURL(string: "https://web.njit.edu/~ss2773/postlostfound.php")
         let request = NSMutableURLRequest(URL:myUrl!)
         request.HTTPMethod = "POST"
-        let postString = "username =\(username)&useremail=\(useremail)&itemname=\(itemname)&itemdesc=\(itemdesc)"
+        let postString = "'username =\(username)&useremail=\(useremail)&itemname=\(itemname)&itemdesc=\(itemdesc)'"
         request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
         let task = NSURLSession.sharedSession().dataTaskWithRequest(request,completionHandler: {data,response, error ->
             Void in
