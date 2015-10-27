@@ -102,7 +102,8 @@ class VectorViewController: UITableViewController {
         
         override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cellval = tableView.dequeueReusableCellWithIdentifier("customcell", forIndexPath: indexPath) as! VectorControllerCell
-           
+            var myImage =  UIImage(data: NSData(contentsOfURL: NSURL(string:"http://njitvector.com/wp-content/uploads/2015/10/Screen-Shot-2015-10-02-at-6.26.13-AM.png")!)!)
+            cellval.ArticleImg.image=myImage
             
             if(searchActive && filtered.count != 0){
                 cellval.ArticleTitle.text = filtered[indexPath.row]
@@ -125,7 +126,7 @@ class VectorViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
          let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
         let iVal = segue.destinationViewController as! VectorDetailControl
-      
+
         if(searchActive  && filtered.count != 0){
             iVal.strVector = filteredId[indexPath.row]
         }
