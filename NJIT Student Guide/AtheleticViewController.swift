@@ -1,7 +1,7 @@
 
 import UIKit
 
-class AtheleticViewController: UITableViewController {
+class AtheleticProfessorViewController: UITableViewController {
     var list = [String]()
     var scheduleChoice = String()
     var temp = String()
@@ -12,7 +12,7 @@ class AtheleticViewController: UITableViewController {
         {
                 getJSON("https://web.njit.edu/~ts336/athletic.php")
         }else{
-            getJSON("https://web.njit.edu/~ts336/professor.php")
+            getJSON("https://web.njit.edu/~rb454/departmentlist.php")
         }
     }
 
@@ -52,7 +52,7 @@ class AtheleticViewController: UITableViewController {
                 if scheduleChoice == "Athletic Center"{
                 list.append(dd["games"] as! String)
                 }else{
-                    list.append(dd["name"] as! String)
+                    list.append(dd["Department"] as! String)
                 }
                 i = i+1
             }
@@ -68,12 +68,22 @@ class AtheleticViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
         let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
-        
+        if scheduleChoice == "Athletic Center"
+        {
         let destViewController = segue.destinationViewController as! SetAppoinmentAtheleticViewController
-        
-        destViewController.scheduleChoice = scheduleChoice
-        
-        destViewController.optionChoosed = list[indexPath.row]
+            
+            destViewController.scheduleChoice = scheduleChoice
+            
+            destViewController.optionChoosed = list[indexPath.row]
+        }else{
+            let destViewController = segue.destinationViewController as! ProfessorListViewController
+            
+            destViewController.scheduleChoice = scheduleChoice
+            
+            destViewController.optionChoosed = list[indexPath.row]
+
+        }
+       
         
     }
     
