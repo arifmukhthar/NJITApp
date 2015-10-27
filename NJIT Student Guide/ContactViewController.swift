@@ -54,25 +54,53 @@ class ContactViewController: UITableViewController {
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        filtered.removeAll()
+        filteredPhone.removeAll()
+        filteredMail.removeAll()
+        filteredCall.removeAll()
+        filteredName.removeAll()
+        
+        if(searchBar.selectedScopeButtonIndex==0)
+        {
         filtered = dataArrDept.filter({ (text) -> Bool in
             let tmp: NSString = text
             let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
             return range.location != NSNotFound
         })
-        if(filtered.count == 0){
+        }
+        else
+        {
+            filteredName = dataArrName.filter({ (text) -> Bool in
+                let tmp: NSString = text
+                let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+                return range.location != NSNotFound
+            })
+        }
+        
+        if(filtered.count == 0 && filteredName.count==0){
             searchActive = false;
         } else {
             searchActive = true;
-            filteredName.removeAll()
-            filteredPhone.removeAll()
-            filteredMail.removeAll()
-            filteredCall.removeAll()
-            for item in filtered{
+            if(searchBar.selectedScopeButtonIndex==0)
+            {
+             for item in filtered{
                 let indDataArr=dataArrDept.indexOf(item)
                 filteredName.append(dataArrName[indDataArr!])
                 filteredPhone.append(dataArrPhone[indDataArr!])
                 filteredMail.append(dataArrMail[indDataArr!])
                 filteredCall.append(dataArrCall[indDataArr!])
+                }
+            }
+            else
+            {
+                for item in filteredName{
+                    let indDataArr=dataArrName.indexOf(item)
+                    filtered.append(dataArrDept[indDataArr!])
+                    filteredPhone.append(dataArrPhone[indDataArr!])
+                    filteredMail.append(dataArrMail[indDataArr!])
+                    filteredCall.append(dataArrCall[indDataArr!])
+                }
                 
             }
         }
