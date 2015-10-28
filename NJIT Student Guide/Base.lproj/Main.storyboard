@@ -337,9 +337,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="0.60784313729999995" green="0.094117647060000004" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="CRI-er-5FV">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="iQn-fh-V2t" id="ZBC-ZO-zJH"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AcademicListCell" rowHeight="69" id="C1Q-U8-DAE" customClass="AcademicCell" customModule="NJIT_Student_Guide" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="69"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C1Q-U8-DAE" id="Mej-Zj-yLq">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="68.5"/>
@@ -399,6 +407,7 @@
                     </refreshControl>
                     <connections>
                         <outlet property="TblViewOutlet" destination="S7c-xu-CMZ" id="8aP-I8-nXX"/>
+                        <outlet property="searchBar" destination="CRI-er-5FV" id="f0O-Fc-hst"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dNz-0I-ySV" userLabel="First Responder" sceneMemberID="firstResponder"/>

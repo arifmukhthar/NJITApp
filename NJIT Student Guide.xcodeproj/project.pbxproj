@@ -31,6 +31,7 @@
 		80AC77671BB343AE004E050C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AC77651BB343AE004E050C /* LaunchScreen.storyboard */; };
 		80AC77721BB343AE004E050C /* NJIT_Student_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC77711BB343AE004E050C /* NJIT_Student_GuideUITests.swift */; };
 		B76BA9121BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BA9111BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift */; };
+		B7C0E53D1BE06E5E00EC7707 /* ProfessorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0E53C1BE06E5E00EC7707 /* ProfessorListViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		B7FED58F1BB62D4C00F3FEB8 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FED58E1BB62D4C00F3FEB8 /* ScheduleViewController.swift */; };
 		B7FED5911BB6449F00F3FEB8 /* AtheleticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */; };
 		D408EE601BDC3678009DB12C /* RestCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408EE5F1BDC3678009DB12C /* RestCall.swift */; };
@@ -81,6 +82,7 @@
 		80AC77711BB343AE004E050C /* NJIT_Student_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJIT_Student_GuideUITests.swift; sourceTree = "<group>"; };
 		80AC77731BB343AE004E050C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B76BA9111BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAppoinmentAtheleticViewController.swift; sourceTree = "<group>"; };
+		B7C0E53C1BE06E5E00EC7707 /* ProfessorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessorListViewController.swift; sourceTree = "<group>"; };
 		B7FED58E1BB62D4C00F3FEB8 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtheleticViewController.swift; sourceTree = "<group>"; };
 		D408EE5F1BDC3678009DB12C /* RestCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestCall.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				70AFC5341BDC36B70029FF09 /* ContactCellControl.swift in Sources */,
 				D444539B1BDFF74E00F9123C /* SRWebClient.swift in Sources */,
 				B7FED5911BB6449F00F3FEB8 /* AtheleticViewController.swift in Sources */,
+				B7C0E53D1BE06E5E00EC7707 /* ProfessorListViewController.swift in Sources */,
 				70AFC5301BDC18FB0029FF09 /* VectorViewController.swift in Sources */,
 				0435F17C1BC4E631004B12F0 /* EurekaTableCellModel.swift in Sources */,
 				047761951BC9BB4A00D98830 /* AcademicListViewController.swift in Sources */,
