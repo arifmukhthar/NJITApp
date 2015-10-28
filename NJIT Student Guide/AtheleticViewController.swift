@@ -75,14 +75,14 @@ class AtheleticProfessorViewController: UITableViewController {
             destViewController.scheduleChoice = scheduleChoice
             
             destViewController.optionChoosed = list[indexPath.row]
-        }/*else{
+        }else{
             let destViewController = segue.destinationViewController as! ProfessorListViewController
             
             destViewController.scheduleChoice = scheduleChoice
             
             destViewController.optionChoosed = list[indexPath.row]
 
-        }*/
+        }
        
         
     }

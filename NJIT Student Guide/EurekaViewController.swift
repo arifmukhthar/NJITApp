@@ -61,7 +61,7 @@ class EurekaViewController: UITableViewController,MFMailComposeViewControllerDel
             as! EurekaTableControllerCell
         let row = indexPath.row
         cell.profile_name.text = rest.profileName[row]
-        cell._image.image = UIImage(named: item_images[row])
+        cell._image.image = UIImage(named: item_images[0])
         cell.found_item_name.text = rest.itemName[row]
         cell.item_Description.text = rest.itemDesc[row]
         
