@@ -50,20 +50,6 @@
 			remoteGlobalIDString = 80AC77541BB343AE004E050C;
 			remoteInfo = "NJIT Student Guide";
 		};
-		D44453961BDFF6D200F9123C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D44453901BDFF6D200F9123C /* SRWebClient.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B4E91993194B1DCC00C0AC8B;
-			remoteInfo = SRWebClient;
-		};
-		D44453981BDFF6D200F9123C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D44453901BDFF6D200F9123C /* SRWebClient.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B4E9199E194B1DCC00C0AC8B;
-			remoteInfo = SRWebClientTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -98,7 +84,6 @@
 		B7FED58E1BB62D4C00F3FEB8 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtheleticViewController.swift; sourceTree = "<group>"; };
 		D408EE5F1BDC3678009DB12C /* RestCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestCall.swift; sourceTree = "<group>"; };
-		D44453901BDFF6D200F9123C /* SRWebClient.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SRWebClient.xcodeproj; path = "../Swift-SRWebClient/SRWebClient.xcodeproj"; sourceTree = "<group>"; };
 		D444539A1BDFF74E00F9123C /* SRWebClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRWebClient.swift; sourceTree = "<group>"; };
 		D4D285931BE06814007F3930 /* toDoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = toDoModel.xcdatamodel; sourceTree = "<group>"; };
 		D4D285951BE0684F007F3930 /* ToDoModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ToDoModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -130,7 +115,6 @@
 			children = (
 				D4D285951BE0684F007F3930 /* ToDoModel+CoreDataProperties.swift */,
 				D4D285961BE0684F007F3930 /* ToDoModel.swift */,
-				D44453901BDFF6D200F9123C /* SRWebClient.xcodeproj */,
 				80AC77571BB343AE004E050C /* NJIT Student Guide */,
 				80AC77701BB343AE004E050C /* NJIT Student GuideUITests */,
 				80AC77561BB343AE004E050C /* Products */,
@@ -191,15 +175,6 @@
 				80AC77731BB343AE004E050C /* Info.plist */,
 			);
 			path = "NJIT Student GuideUITests";
-			sourceTree = "<group>";
-		};
-		D44453911BDFF6D200F9123C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D44453971BDFF6D200F9123C /* SRWebClient.framework */,
-				D44453991BDFF6D200F9123C /* SRWebClientTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,12 +246,6 @@
 			mainGroup = 80AC774C1BB343AE004E050C;
 			productRefGroup = 80AC77561BB343AE004E050C /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = D44453911BDFF6D200F9123C /* Products */;
-					ProjectRef = D44453901BDFF6D200F9123C /* SRWebClient.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				80AC77541BB343AE004E050C /* NJIT Student Guide */,
@@ -284,23 +253,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		D44453971BDFF6D200F9123C /* SRWebClient.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SRWebClient.framework;
-			remoteRef = D44453961BDFF6D200F9123C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		D44453991BDFF6D200F9123C /* SRWebClientTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SRWebClientTests.xctest;
-			remoteRef = D44453981BDFF6D200F9123C /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		80AC77531BB343AE004E050C /* Resources */ = {
