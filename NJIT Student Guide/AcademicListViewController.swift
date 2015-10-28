@@ -117,11 +117,14 @@ class AcademicListViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(searchActive){
+            return self.infodatasearch.count
+        }
         return self.infodata.count
+        
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    9
         let cell  = tableView.dequeueReusableCellWithIdentifier("AcademicListCell", forIndexPath: indexPath) as! AcademicCell
         if(searchActive && infodatasearch.count != 0){
             cell.textViewInfo.text = self.infodatasearch[indexPath.row]

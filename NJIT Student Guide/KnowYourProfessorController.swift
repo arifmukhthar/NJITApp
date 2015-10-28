@@ -21,7 +21,7 @@ class KnowYourProfessorController: UITableViewController{
     var desc = [String]()
    // var collegeID = [String]()
     
-    
+    var filteredImg = [String]()
     var filteredprofName = [String]()
     var filtereddeptName = [String]()
     var filteredaddress = [String]()
@@ -30,9 +30,9 @@ class KnowYourProfessorController: UITableViewController{
     var filteredhours = [String]()
     var filtereddesc = [String]()
    // var filteredcollegeID = [String]()
-
+    var dataImg = [String]()
     var searchActive : Bool = false
-    var filtered:[String] = []
+    var filtered:[Int] = []
     
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
@@ -70,7 +70,7 @@ class KnowYourProfessorController: UITableViewController{
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(searchActive)
         {
-            return filtered.count
+            return filteredprofName.count
             
         }
         else{
@@ -98,6 +98,7 @@ class KnowYourProfessorController: UITableViewController{
                 contact.append(resultString["contact"] as! String)
                 hours.append(resultString["hours"] as! String)
                 desc.append(resultString["description"] as! String)
+                dataImg.append(resultString["imageURL"] as! String)
              //   collegeID.append(resultString["collegeid"] as! String)
                 
                 i++
@@ -109,12 +110,15 @@ class KnowYourProfessorController: UITableViewController{
     }
     
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
-        filtered = profName.filter({ (text) -> Bool in
+       
+        if(searchBar.selectedScopeButtonIndex==0)
+        {
+        filteredprofName = profName.filter({ (text) -> Bool in
             let tmp: NSString = text
             let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
             return range.location != NSNotFound
         })
-        if(filtered.count == 0){
+        if(filteredprofName.count == 0){
             searchActive = false;
 
         } else {
@@ -126,19 +130,60 @@ class KnowYourProfessorController: UITableViewController{
             filtereddesc.removeAll()
             filteredemail.removeAll()
             filteredhours.removeAll()
-            filteredprofName.removeAll()
-          //  filteredcollegeID.removeAll()
-            for item in filtered{
+            filteredImg.removeAll()
+           
+            for item in filteredprofName{
                 let inOriginalList = profName.indexOf(item)
-                filteredprofName.append(profName[inOriginalList!])
                 filteredhours.append(hours[inOriginalList!])
                 filteredemail.append(email[inOriginalList!])
                 filtereddesc.append(desc[inOriginalList!])
                 filtereddeptName.append(deptName[inOriginalList!])
                 filteredcontact.append(contact[inOriginalList!])
                 filteredaddress.append(address[inOriginalList!])
-        //        filteredcollegeID.append(collegeID[inOriginalList!])
+                filteredImg.append(dataImg[inOriginalList!])
             }
+            }
+        }
+        else
+        {
+            filtereddeptName = deptName.filter({ (text) -> Bool in
+                let tmp: NSString = text
+                let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+                return range.location != NSNotFound
+            })
+            if(filtereddeptName.count == 0){
+                searchActive = false;
+                
+            } else {
+                searchActive = true;
+                
+                filteredaddress.removeAll()
+                filteredcontact.removeAll()
+                filtereddesc.removeAll()
+                filteredemail.removeAll()
+                filteredhours.removeAll()
+                filteredprofName.removeAll()
+                filteredImg.removeAll()
+                
+                var temp = [String]()
+                temp=deptName
+                for item in filtereddeptName{
+                    
+                   
+                    let inOriginalList = deptName.indexOf(item)
+                    deptName.removeAtIndex(inOriginalList!)
+                    deptName.insert("!!", atIndex: inOriginalList!)
+                    filteredprofName.append(profName[inOriginalList!])
+                    filteredhours.append(hours[inOriginalList!])
+                    filteredemail.append(email[inOriginalList!])
+                    filtereddesc.append(desc[inOriginalList!])
+                  filteredImg.append(dataImg[inOriginalList!])
+                    filteredcontact.append(contact[inOriginalList!])
+                    filteredaddress.append(address[inOriginalList!])
+                }
+                deptName=temp
+            }
+            
         }
       
         self.tableView.reloadData()
@@ -154,7 +199,7 @@ class KnowYourProfessorController: UITableViewController{
         
         let destViewController = segue.destinationViewController as! KnowYourProfessorDetails
         
-        if(searchActive && filtered.count != 0)
+        if(searchActive && filteredprofName.count != 0)
         {
             destViewController.profName = filteredprofName[indexPath.row]
             destViewController.deptName = filtereddeptName[indexPath.row]
@@ -163,6 +208,7 @@ class KnowYourProfessorController: UITableViewController{
             destViewController.contact = filteredcontact[indexPath.row]
             destViewController.hours = filteredhours[indexPath.row]
             destViewController.desc = filtereddesc[indexPath.row]
+            destViewController.url = filteredImg[indexPath.row]
         }
         else
         {
@@ -173,6 +219,7 @@ class KnowYourProfessorController: UITableViewController{
         destViewController.contact = contact[indexPath.row]
         destViewController.hours = hours[indexPath.row]
         destViewController.desc = desc[indexPath.row]
+            destViewController.url = dataImg[indexPath.row]
         }
         
     }
@@ -180,13 +227,13 @@ class KnowYourProfessorController: UITableViewController{
         
         let Cell = self.tableView.dequeueReusableCellWithIdentifier("Cello", forIndexPath: indexPath) as UITableViewCell
         
-        if(searchActive && filtered.count != 0){
-            Cell.textLabel?.text = filtered[indexPath.row]
-            Cell.textLabel?.textColor = UIColor.whiteColor()
+          Cell.textLabel?.textColor = UIColor.whiteColor()
+        if(searchActive && filteredprofName.count != 0){
+            Cell.textLabel?.text = filteredprofName[indexPath.row]
+          
             
         } else {
             Cell.textLabel?.text = profName[indexPath.row]
-            Cell.textLabel?.textColor = UIColor.whiteColor()
         }
         
         

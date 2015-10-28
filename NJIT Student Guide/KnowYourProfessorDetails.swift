@@ -18,6 +18,7 @@ class KnowYourProfessorDetails: UIViewController {
     @IBOutlet weak var hoursField: UILabel!
     @IBOutlet weak var descriptionField: UILabel!
     
+    @IBOutlet weak var imgDet: UIImageView!
     
     
     
@@ -28,6 +29,7 @@ class KnowYourProfessorDetails: UIViewController {
     var contact = String()
     var hours = String()
     var desc = String()
+    var url = String()
     
     
     
@@ -42,6 +44,8 @@ class KnowYourProfessorDetails: UIViewController {
         contactField.text = contact
         hoursField.text = hours
         descriptionField.text = desc
+        let myImage =  UIImage(data: NSData(contentsOfURL: NSURL(string: url)!)!)
+        imgDet.image=myImage
         
         
         
