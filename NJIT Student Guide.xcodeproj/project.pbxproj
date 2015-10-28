@@ -14,6 +14,7 @@
 		0468EE831BC320010032AC7D /* DateSelectAtheleticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468EE821BC320010032AC7D /* DateSelectAtheleticViewController.swift */; };
 		047761951BC9BB4A00D98830 /* AcademicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047761941BC9BB4A00D98830 /* AcademicListViewController.swift */; };
 		04D9A16C1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9A16B1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift */; };
+		702FDFD01BE04BE60005056A /* TestInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702FDFCF1BE04BE60005056A /* TestInternet.swift */; settings = {ASSET_TAGS = (); }; };
 		70AFC52E1BDC18FB0029FF09 /* VectorControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC52B1BDC18FB0029FF09 /* VectorControllerCell.swift */; };
 		70AFC52F1BDC18FB0029FF09 /* VectorDetailControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC52C1BDC18FB0029FF09 /* VectorDetailControl.swift */; };
 		70AFC5301BDC18FB0029FF09 /* VectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */; };
@@ -55,6 +56,7 @@
 		0468EE821BC320010032AC7D /* DateSelectAtheleticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSelectAtheleticViewController.swift; sourceTree = "<group>"; };
 		047761941BC9BB4A00D98830 /* AcademicListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicListViewController.swift; sourceTree = "<group>"; };
 		04D9A16B1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicCalendarTableViewController.swift; sourceTree = "<group>"; };
+		702FDFCF1BE04BE60005056A /* TestInternet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestInternet.swift; path = ../TestInternet.swift; sourceTree = "<group>"; };
 		70AFC52B1BDC18FB0029FF09 /* VectorControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorControllerCell.swift; sourceTree = "<group>"; };
 		70AFC52C1BDC18FB0029FF09 /* VectorDetailControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorDetailControl.swift; sourceTree = "<group>"; };
 		70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				D13482581BDD9DBE00909A1B /* Images */,
 				70AFC5331BDC36B70029FF09 /* ContactCellControl.swift */,
+				702FDFCF1BE04BE60005056A /* TestInternet.swift */,
 				70AFC52B1BDC18FB0029FF09 /* VectorControllerCell.swift */,
 				70AFC52C1BDC18FB0029FF09 /* VectorDetailControl.swift */,
 				70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */,
@@ -271,6 +274,7 @@
 				040B86C41BCF506B008457AE /* AcademicCell.swift in Sources */,
 				0468EE831BC320010032AC7D /* DateSelectAtheleticViewController.swift in Sources */,
 				802C84201BDDA57B007D775B /* ViewController.swift in Sources */,
+				702FDFD01BE04BE60005056A /* TestInternet.swift in Sources */,
 				B7FED58F1BB62D4C00F3FEB8 /* ScheduleViewController.swift in Sources */,
 				80AC775B1BB343AE004E050C /* RootViewController.swift in Sources */,
 				0435F1721BC4D703004B12F0 /* EurekaViewController.swift in Sources */,

@@ -12,6 +12,12 @@ class VectorViewController: UITableViewController {
     
         override func viewDidLoad() {
             super.viewDidLoad();
+            
+            
+            if TestInternet.isConnected() == false {
+                let alert = UIAlertView(title: "No Internet Connection", message: "Make sure your device is connected to the internet.", delegate: nil, cancelButtonTitle: "OK")
+                alert.show()
+            }
             getJSON("https://web.njit.edu/~ts336/arttitle.php")
         }
         
