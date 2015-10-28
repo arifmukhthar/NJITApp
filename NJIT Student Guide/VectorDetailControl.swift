@@ -30,7 +30,7 @@ class VectorDetailControl: UIViewController {
 
     
     @IBAction func btnShare(sender: UIButton) {
-        let acItem="Hey have a look at the Vector New : "+self.dataArrTitle
+        let acItem="Hey have a look at the NJIT Vector News: "+self.dataArrTitle
 
         let actvVC:UIActivityViewController = UIActivityViewController(activityItems: [acItem], applicationActivities: nil)
         
