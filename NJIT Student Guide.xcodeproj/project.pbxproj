@@ -29,9 +29,8 @@
 		80AC77621BB343AE004E050C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AC77601BB343AE004E050C /* Main.storyboard */; };
 		80AC77641BB343AE004E050C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80AC77631BB343AE004E050C /* Assets.xcassets */; };
 		80AC77671BB343AE004E050C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AC77651BB343AE004E050C /* LaunchScreen.storyboard */; };
-		80AC77721BB343AE004E050C /* NJIT_Student_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC77711BB343AE004E050C /* NJIT_Student_GuideUITests.swift */; };
 		B76BA9121BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BA9111BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift */; };
-		B7C0E53D1BE06E5E00EC7707 /* ProfessorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0E53C1BE06E5E00EC7707 /* ProfessorListViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		B7C0E53D1BE06E5E00EC7707 /* ProfessorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C0E53C1BE06E5E00EC7707 /* ProfessorListViewController.swift */; };
 		B7FED58F1BB62D4C00F3FEB8 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FED58E1BB62D4C00F3FEB8 /* ScheduleViewController.swift */; };
 		B7FED5911BB6449F00F3FEB8 /* AtheleticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */; };
 		D408EE601BDC3678009DB12C /* RestCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D408EE5F1BDC3678009DB12C /* RestCall.swift */; };
@@ -42,16 +41,6 @@
 		D4D2859A1BE06917007F3930 /* toDoPersist.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D285991BE06917007F3930 /* toDoPersist.swift */; };
 		D4FD26621BDDC53E00A7F3F3 /* PostLostItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FD26611BDDC53E00A7F3F3 /* PostLostItemViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		80AC776E1BB343AE004E050C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 80AC774D1BB343AE004E050C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 80AC77541BB343AE004E050C;
-			remoteInfo = "NJIT Student Guide";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		040B86C31BCF506B008457AE /* AcademicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicCell.swift; sourceTree = "<group>"; };
@@ -78,7 +67,6 @@
 		80AC77631BB343AE004E050C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80AC77661BB343AE004E050C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		80AC77681BB343AE004E050C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		80AC776D1BB343AE004E050C /* NJIT Student GuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NJIT Student GuideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AC77711BB343AE004E050C /* NJIT_Student_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJIT_Student_GuideUITests.swift; sourceTree = "<group>"; };
 		80AC77731BB343AE004E050C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B76BA9111BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAppoinmentAtheleticViewController.swift; sourceTree = "<group>"; };
@@ -96,13 +84,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		80AC77521BB343AE004E050C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		80AC776A1BB343AE004E050C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -127,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				80AC77551BB343AE004E050C /* NJIT Student Guide.app */,
-				80AC776D1BB343AE004E050C /* NJIT Student GuideUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,24 +179,6 @@
 			productReference = 80AC77551BB343AE004E050C /* NJIT Student Guide.app */;
 			productType = "com.apple.product-type.application";
 		};
-		80AC776C1BB343AE004E050C /* NJIT Student GuideUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 80AC77791BB343AE004E050C /* Build configuration list for PBXNativeTarget "NJIT Student GuideUITests" */;
-			buildPhases = (
-				80AC77691BB343AE004E050C /* Sources */,
-				80AC776A1BB343AE004E050C /* Frameworks */,
-				80AC776B1BB343AE004E050C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				80AC776F1BB343AE004E050C /* PBXTargetDependency */,
-			);
-			name = "NJIT Student GuideUITests";
-			productName = "NJIT Student GuideUITests";
-			productReference = 80AC776D1BB343AE004E050C /* NJIT Student GuideUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -230,10 +192,6 @@
 					80AC77541BB343AE004E050C = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = B2NMY273BR;
-					};
-					80AC776C1BB343AE004E050C = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 80AC77541BB343AE004E050C;
 					};
 				};
 			};
@@ -251,7 +209,6 @@
 			projectRoot = "";
 			targets = (
 				80AC77541BB343AE004E050C /* NJIT Student Guide */,
-				80AC776C1BB343AE004E050C /* NJIT Student GuideUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -264,13 +221,6 @@
 				80AC77671BB343AE004E050C /* LaunchScreen.storyboard in Resources */,
 				80AC77641BB343AE004E050C /* Assets.xcassets in Resources */,
 				80AC77621BB343AE004E050C /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		80AC776B1BB343AE004E050C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,23 +264,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		80AC77691BB343AE004E050C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				80AC77721BB343AE004E050C /* NJIT_Student_GuideUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		80AC776F1BB343AE004E050C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 80AC77541BB343AE004E050C /* NJIT Student Guide */;
-			targetProxy = 80AC776E1BB343AE004E050C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		80AC77601BB343AE004E050C /* Main.storyboard */ = {
@@ -465,30 +399,6 @@
 			};
 			name = Release;
 		};
-		80AC777A1BB343AE004E050C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "NJIT Student GuideUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Fantastic4.NJIT-Student-GuideUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "NJIT Student Guide";
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		80AC777B1BB343AE004E050C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "NJIT Student GuideUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Fantastic4.NJIT-Student-GuideUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = "NJIT Student Guide";
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -506,15 +416,6 @@
 			buildConfigurations = (
 				80AC77771BB343AE004E050C /* Debug */,
 				80AC77781BB343AE004E050C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		80AC77791BB343AE004E050C /* Build configuration list for PBXNativeTarget "NJIT Student GuideUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				80AC777A1BB343AE004E050C /* Debug */,
-				80AC777B1BB343AE004E050C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

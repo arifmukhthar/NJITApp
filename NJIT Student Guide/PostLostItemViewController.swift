@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import AssetsLibrary
 
 class PostLostItemViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate {
 
@@ -36,9 +36,9 @@ class PostLostItemViewController: UIViewController,UIImagePickerControllerDelega
     
     @IBAction func Save(sender: AnyObject) {
         //
+       
         postJSON(userName.text!,useremail: userEmail.text!,itemname: ItemName.text!,itemdesc: itemDesc.text!)
-        imageUploadRequest(imageView: imageWindow, uploadUrl: url! , param: nil)
-        
+      
     }
 
     /*
@@ -66,7 +66,33 @@ class PostLostItemViewController: UIViewController,UIImagePickerControllerDelega
         let pickedImage =  info[UIImagePickerControllerOriginalImage] as! UIImage
         imageWindow.image = pickedImage
         dismissViewControllerAnimated(true, completion: nil)
+        let imageURL: NSURL = info[UIImagePickerControllerReferenceURL] as! NSURL
+        let imageName = imageURL.lastPathComponent
+        print(imageURL)
+        let docdir = NSSearchPathForDirectoriesInDomains(.DocumentDirectory,.UserDomainMask, true).first! as String
+        let docurl = NSURL(string: docdir)
+        let url = docurl!.URLByAppendingPathComponent(imageName!)
+        
     }
+    
+    
+    
+ func getImageFromPath(path: String) -> UIImage? {
+        let assetsLibrary = ALAssetsLibrary()
+        let url = NSURL(string: path)!
+        
+        var image: UIImage?
+        var loadError: NSError?
+        assetsLibrary.assetForURL(url, resultBlock: { (asset) -> Void in
+            image = UIImage(CGImage: asset.defaultRepresentation().fullResolutionImage().takeUnretainedValue())
+            }, failureBlock: { (error) -> Void in
+                loadError = error;
+                print(loadError)
+        })
+        
+        
+            return image
+            }
     func imageUploadRequest(imageView imageView: UIImageView, uploadUrl: NSURL, param: [String:String]?) {
         
        
@@ -161,7 +187,11 @@ extension NSMutableData {
         appendData(data!)
     }
 }
-      
+
+func saveImage() {
+    
+}
+
        //
     func postJSON(username: String!,useremail: String!,itemname: String!,itemdesc: String!) {
         let myUrl = NSURL(string: "https://web.njit.edu/~ss2773/postlostfound.php")
