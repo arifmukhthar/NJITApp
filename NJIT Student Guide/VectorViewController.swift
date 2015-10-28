@@ -17,12 +17,14 @@ class VectorViewController: UITableViewController {
         
     @IBOutlet weak var searchBar: UISearchBar!
         var dataArr:[String]=[]
+        var dataArrImg:[String]=[]
         var dataArrDate:[String]=[]
         var dataArrId:[String]=[]
         var strIndex:Int=0
         var searchActive : Bool = false
         var filtered:[String] = []
         var filteredDate:[String] = []
+        var filteredImg:[String] = []
         var filteredId:[String] = []
     
     
@@ -56,10 +58,12 @@ class VectorViewController: UITableViewController {
         
             filteredDate.removeAll()
             filteredId.removeAll()
+            filteredImg.removeAll()
             for item in filtered{
                 let indDataArr=dataArr.indexOf(item)
                 filteredDate.append(dataArrDate[indDataArr!])
                 filteredId.append(dataArrId[indDataArr!])
+                filteredImg.append(dataArrImg[indDataArr!])
             }
         }
         self.tableView.reloadData()
@@ -84,6 +88,8 @@ class VectorViewController: UITableViewController {
                     dataArr.append(dd["ArticleTitle"] as! String)
                     dataArrDate.append(dd["ArticleDate"] as! String)
                     dataArrId.append(dd["ArticleId"] as! String)
+                    dataArrImg.append(dd["ArticleImage"] as! String)
+                    
                     i = i+1
                     
                 }
@@ -102,13 +108,16 @@ class VectorViewController: UITableViewController {
         
         override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
             let cellval = tableView.dequeueReusableCellWithIdentifier("customcell", forIndexPath: indexPath) as! VectorControllerCell
-           
             
             if(searchActive && filtered.count != 0){
+                let myImage =  UIImage(data: NSData(contentsOfURL: NSURL(string: filteredImg[indexPath.row])!)!)
+                cellval.ArticleImg.image=myImage
+                
                 cellval.ArticleTitle.text = filtered[indexPath.row]
                 cellval.ArticleDate.text = filteredDate[indexPath.row]
             } else {
-                
+                let myImage =  UIImage(data: NSData(contentsOfURL: NSURL(string: dataArrImg[indexPath.row])!)!)
+                cellval.ArticleImg.image=myImage
                 cellval.ArticleTitle.text=dataArr[indexPath.item]
                 cellval.ArticleDate.text=dataArrDate[indexPath.item]
             }
@@ -125,7 +134,7 @@ class VectorViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
          let indexPath : NSIndexPath = self.tableView.indexPathForSelectedRow!
         let iVal = segue.destinationViewController as! VectorDetailControl
-      
+
         if(searchActive  && filtered.count != 0){
             iVal.strVector = filteredId[indexPath.row]
         }
