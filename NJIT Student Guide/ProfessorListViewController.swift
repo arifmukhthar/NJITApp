@@ -13,7 +13,6 @@ class ProfessorListViewController: UITableViewController {
     var scheduleChoice = String()
     var optionChoosed = String()
     var list = [String]()
-    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         getJSON("https://web.njit.edu/~rb454/professorlist.php")
