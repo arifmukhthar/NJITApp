@@ -34,12 +34,8 @@ class DateSelectAtheleticViewController: UIViewController, MFMailComposeViewCont
         super.viewDidLoad()
         print(dateChoosed)
         date.text = dateChoosed
-        if AthOrPro == "Athletic Center"{
-        selectedOption.text = "\(choice) - Athletic Center"
-        }else{
-            selectedOption.text = "\(choice)"
-        }
-
+        selectedOption.text = "\(choice)"
+	
     }
 
     override func didReceiveMemoryWarning() {
