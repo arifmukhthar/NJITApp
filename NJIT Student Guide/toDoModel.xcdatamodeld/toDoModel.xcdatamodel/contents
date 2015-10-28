@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Xcode 7.0">
+    <entity name="ToDoModel" representedClassName=".ToDoModel" syncable="YES">
+        <attribute name="items" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tick" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ToDoModel" positionX="-54" positionY="-9" width="128" height="75"/>
+    </elements>
+</model>

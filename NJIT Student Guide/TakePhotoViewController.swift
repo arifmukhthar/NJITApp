@@ -43,7 +43,7 @@ class TakePhotoViewController: UIViewController,UINavigationControllerDelegate,U
     */
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         imagePicker.dismissViewControllerAnimated(true,completion: nil)
-        imageView.image = UIImagePickerControllerOriginalImage as? UIImage
+        imageView.image =  UIImagePickerControllerOriginalImage as? UIImage
         
     }
 
