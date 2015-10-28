@@ -15,6 +15,11 @@ class AcademicListViewController: UITableViewController {
     var yeardata = [String]()
     var daydata = [String]()
     
+    var infodatasearch = [String]()
+    var yeardatasearch = [String]()
+    var daydatasearch = [String]()
+    var searchActive : Bool = false
+    
     @IBOutlet var TblViewOutlet: UITableView!
     
     override func viewDidLoad() {
@@ -24,6 +29,48 @@ class AcademicListViewController: UITableViewController {
 
     }
     
+
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchActive = true;
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        searchActive = false;
+    }
+    
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        infodatasearch = infodata.filter({ (text) -> Bool in
+            let tmp: NSString = text
+            let range = tmp.rangeOfString(searchText, options: NSStringCompareOptions.CaseInsensitiveSearch)
+            return range.location != NSNotFound
+        })
+        if(infodatasearch.count == 0){
+            searchActive = false;
+        }
+        else {
+            searchActive = true;
+            
+            yeardatasearch.removeAll()
+            daydatasearch.removeAll()
+            for item in infodatasearch{
+                let indDataArr=infodata.indexOf(item)
+                yeardatasearch.append(yeardata[indDataArr!])
+                daydatasearch.append(daydata[indDataArr!])
+            }
+        }
+        self.tableView.reloadData()
+        
+    }
 
     
     override func didReceiveMemoryWarning() {
@@ -76,10 +123,15 @@ class AcademicListViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     9
         let cell  = tableView.dequeueReusableCellWithIdentifier("AcademicListCell", forIndexPath: indexPath) as! AcademicCell
+        if(searchActive && infodatasearch.count != 0){
+            cell.textViewInfo.text = self.infodatasearch[indexPath.row]
+            cell.yearLabel.text = self.yeardatasearch[indexPath.row]
+            cell.dayLabel.text = self.daydatasearch[indexPath.row]
+        } else {
         cell.textViewInfo.text = self.infodata[indexPath.row]
         cell.yearLabel.text = self.yeardata[indexPath.row]
         cell.dayLabel.text = self.daydata[indexPath.row]
-        
+        }
         print(self.yeardata[indexPath.row])
         return cell
     }
