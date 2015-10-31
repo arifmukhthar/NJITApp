@@ -76,10 +76,10 @@
 		B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtheleticViewController.swift; sourceTree = "<group>"; };
 		D408EE5F1BDC3678009DB12C /* RestCall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestCall.swift; sourceTree = "<group>"; };
 		D444539A1BDFF74E00F9123C /* SRWebClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SRWebClient.swift; sourceTree = "<group>"; };
-		D4493FC21BE108F200B21858 /* ProfessorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessorListViewController.swift; sourceTree = "<group>"; };
+		D4493FC21BE108F200B21858 /* ProfessorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfessorListViewController.swift; path = ../ProfessorListViewController.swift; sourceTree = "<group>"; };
 		D4D285931BE06814007F3930 /* toDoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = toDoModel.xcdatamodel; sourceTree = "<group>"; };
-		D4D285951BE0684F007F3930 /* ToDoModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ToDoModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D4D285961BE0684F007F3930 /* ToDoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
+		D4D285951BE0684F007F3930 /* ToDoModel+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ToDoModel+CoreDataProperties.swift"; path = "../ToDoModel+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D4D285961BE0684F007F3930 /* ToDoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToDoModel.swift; path = ../ToDoModel.swift; sourceTree = "<group>"; };
 		D4D285991BE06917007F3930 /* toDoPersist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = toDoPersist.swift; sourceTree = "<group>"; };
 		D4FD26611BDDC53E00A7F3F3 /* PostLostItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostLostItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,9 +98,6 @@
 		80AC774C1BB343AE004E050C = {
 			isa = PBXGroup;
 			children = (
-				D4493FC21BE108F200B21858 /* ProfessorListViewController.swift */,
-				D4D285951BE0684F007F3930 /* ToDoModel+CoreDataProperties.swift */,
-				D4D285961BE0684F007F3930 /* ToDoModel.swift */,
 				80AC77571BB343AE004E050C /* NJIT Student Guide */,
 				80AC77701BB343AE004E050C /* NJIT Student GuideUITests */,
 				80AC77561BB343AE004E050C /* Products */,
@@ -118,6 +115,9 @@
 		80AC77571BB343AE004E050C /* NJIT Student Guide */ = {
 			isa = PBXGroup;
 			children = (
+				D4493FC21BE108F200B21858 /* ProfessorListViewController.swift */,
+				D4D285951BE0684F007F3930 /* ToDoModel+CoreDataProperties.swift */,
+				D4D285961BE0684F007F3930 /* ToDoModel.swift */,
 				D444539A1BDFF74E00F9123C /* SRWebClient.swift */,
 				70AFC5331BDC36B70029FF09 /* ContactCellControl.swift */,
 				702FDFCF1BE04BE60005056A /* TestInternet.swift */,
