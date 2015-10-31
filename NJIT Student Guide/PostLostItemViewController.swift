@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AssetsLibrary
+
 
 class PostLostItemViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UITextFieldDelegate {
 
@@ -38,7 +38,7 @@ class PostLostItemViewController: UIViewController,UIImagePickerControllerDelega
         //
        
         postJSON(userName.text!,useremail: userEmail.text!,itemname: ItemName.text!,itemdesc: itemDesc.text!)
-      
+        imageUploadRequest(imageView: imageWindow, uploadUrl: url!)
     }
 
     /*
@@ -66,34 +66,11 @@ class PostLostItemViewController: UIViewController,UIImagePickerControllerDelega
         let pickedImage =  info[UIImagePickerControllerOriginalImage] as! UIImage
         imageWindow.image = pickedImage
         dismissViewControllerAnimated(true, completion: nil)
-        let imageURL: NSURL = info[UIImagePickerControllerReferenceURL] as! NSURL
-        let imageName = imageURL.lastPathComponent
-        print(imageURL)
-        let docdir = NSSearchPathForDirectoriesInDomains(.DocumentDirectory,.UserDomainMask, true).first! as String
-        let docurl = NSURL(string: docdir)
-        let url = docurl!.URLByAppendingPathComponent(imageName!)
-        
-    }
-    
-    
-    
- func getImageFromPath(path: String) -> UIImage? {
-        let assetsLibrary = ALAssetsLibrary()
-        let url = NSURL(string: path)!
-        
-        var image: UIImage?
-        var loadError: NSError?
-        assetsLibrary.assetForURL(url, resultBlock: { (asset) -> Void in
-            image = UIImage(CGImage: asset.defaultRepresentation().fullResolutionImage().takeUnretainedValue())
-            }, failureBlock: { (error) -> Void in
-                loadError = error;
-                print(loadError)
-        })
-        
-        
-            return image
             }
-    func imageUploadRequest(imageView imageView: UIImageView, uploadUrl: NSURL, param: [String:String]?) {
+    
+    
+    
+     func imageUploadRequest(imageView imageView: UIImageView, uploadUrl: NSURL) {
         
        
         
@@ -108,7 +85,7 @@ class PostLostItemViewController: UIViewController,UIImagePickerControllerDelega
         
         if(imageData==nil)  { return; }
         
-        request.HTTPBody = createBodyWithParameters(param, filePathKey: "file", imageDataKey: imageData!, boundary: boundary)
+        request.HTTPBody = createBodyWithParameters( "file", imageDataKey: imageData!, boundary: boundary)
         
         //myActivityIndicator.startAnimating();
         
@@ -148,16 +125,9 @@ class PostLostItemViewController: UIViewController,UIImagePickerControllerDelega
     }
     
     
-    func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
+    func createBodyWithParameters( filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
         let body = NSMutableData();
         
-        if parameters != nil {
-            for (key, value) in parameters! {
-                body.appendString("--\(boundary)\r\n")
-                body.appendString("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
-                body.appendString("\(value)\r\n")
-            }
-        }
         
         let filename = "user-profile.jpg"
         
