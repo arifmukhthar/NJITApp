@@ -14,22 +14,27 @@ class ShuttleMapViewController: UIViewController, MKMapViewDelegate, NSXMLParser
     @IBOutlet weak var myMap: MKMapView!
     var buslat = [Double]()
     var buslon = [Double]()
+    var mapSelect: String = String()
     
     var timer: NSTimer? = nil
         override func viewDidLoad() {
         myMap.delegate = self
         zoomToRegion()
-        getLatLon("Kearney/Harrison")
+        getLatLon(mapSelect)
         let annotation = getAnnotationStop(stopLatArr, lon: stopLonArr, tit: stopTitleArr)
         myMap.addAnnotations(annotation)
         super.viewDidLoad()
         startTimer()
     }
    
+    override func viewDidDisappear(animated: Bool) {
+        timer?.invalidate()
+    }
+    
     var num = 0
     func startTimer()
     {
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "onTick:", userInfo: nil, repeats: false)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "onTick:", userInfo: nil, repeats: true)
     }
     var busAnnotation = [Station]()
     func onTick(timer:NSTimer){
@@ -43,7 +48,7 @@ class ShuttleMapViewController: UIViewController, MKMapViewDelegate, NSXMLParser
         print("onTick Called \(num++)")
         busAnnotation = getBusAnnotation(buslat, lon: buslon)
         myMap.addAnnotations(busAnnotation)
-        self.startTimer()
+        //self.startTimer()
           
     }
     
