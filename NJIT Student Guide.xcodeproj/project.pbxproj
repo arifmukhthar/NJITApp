@@ -14,6 +14,7 @@
 		0468EE831BC320010032AC7D /* DateSelectAtheleticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0468EE821BC320010032AC7D /* DateSelectAtheleticViewController.swift */; };
 		047761951BC9BB4A00D98830 /* AcademicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047761941BC9BB4A00D98830 /* AcademicListViewController.swift */; };
 		04D9A16C1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9A16B1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift */; };
+		702FDFD01BE04BE60005056A /* TestInternet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702FDFCF1BE04BE60005056A /* TestInternet.swift */; };
 		70AFC52E1BDC18FB0029FF09 /* VectorControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC52B1BDC18FB0029FF09 /* VectorControllerCell.swift */; };
 		70AFC52F1BDC18FB0029FF09 /* VectorDetailControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC52C1BDC18FB0029FF09 /* VectorDetailControl.swift */; };
 		70AFC5301BDC18FB0029FF09 /* VectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */; };
@@ -31,10 +32,14 @@
 		80AC77671BB343AE004E050C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AC77651BB343AE004E050C /* LaunchScreen.storyboard */; };
 		80AC77721BB343AE004E050C /* NJIT_Student_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AC77711BB343AE004E050C /* NJIT_Student_GuideUITests.swift */; };
 		B76BA9121BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BA9111BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift */; };
+		B7DB87021BE07E7900CD6B22 /* ProfessorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DB87011BE07E7900CD6B22 /* ProfessorListViewController.swift */; };
 		B7FED58F1BB62D4C00F3FEB8 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FED58E1BB62D4C00F3FEB8 /* ScheduleViewController.swift */; };
 		B7FED5911BB6449F00F3FEB8 /* AtheleticViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */; };
-		D13482571BDD3E2200909A1B /* ProfessorListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13482561BDD3E2200909A1B /* ProfessorListViewController.swift */; };
+		D10404B71BED212E00B24E54 /* GetBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10404B61BED212E00B24E54 /* GetBus.swift */; };
 		D13482591BDD9DBE00909A1B /* Images in Resources */ = {isa = PBXBuildFile; fileRef = D13482581BDD9DBE00909A1B /* Images */; };
+		D16DC4CD1BEC359600D6EB3C /* ShuttleMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DC4CA1BEC359600D6EB3C /* ShuttleMapViewController.swift */; };
+		D16DC4CF1BEC359600D6EB3C /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16DC4CC1BEC359600D6EB3C /* Station.swift */; };
+		D193EEA81BF0732800D2ED7C /* ShuttleStopSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D193EEA71BF0732800D2ED7C /* ShuttleStopSelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +60,7 @@
 		0468EE821BC320010032AC7D /* DateSelectAtheleticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSelectAtheleticViewController.swift; sourceTree = "<group>"; };
 		047761941BC9BB4A00D98830 /* AcademicListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicListViewController.swift; sourceTree = "<group>"; };
 		04D9A16B1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcademicCalendarTableViewController.swift; sourceTree = "<group>"; };
+		702FDFCF1BE04BE60005056A /* TestInternet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestInternet.swift; path = ../TestInternet.swift; sourceTree = "<group>"; };
 		70AFC52B1BDC18FB0029FF09 /* VectorControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorControllerCell.swift; sourceTree = "<group>"; };
 		70AFC52C1BDC18FB0029FF09 /* VectorDetailControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorDetailControl.swift; sourceTree = "<group>"; };
 		70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VectorViewController.swift; sourceTree = "<group>"; };
@@ -76,10 +82,14 @@
 		80AC77711BB343AE004E050C /* NJIT_Student_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NJIT_Student_GuideUITests.swift; sourceTree = "<group>"; };
 		80AC77731BB343AE004E050C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B76BA9111BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetAppoinmentAtheleticViewController.swift; sourceTree = "<group>"; };
+		B7DB87011BE07E7900CD6B22 /* ProfessorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfessorListViewController.swift; sourceTree = "<group>"; };
 		B7FED58E1BB62D4C00F3FEB8 /* ScheduleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtheleticViewController.swift; sourceTree = "<group>"; };
-		D13482561BDD3E2200909A1B /* ProfessorListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfessorListViewController.swift; path = ../ProfessorListViewController.swift; sourceTree = "<group>"; };
+		D10404B61BED212E00B24E54 /* GetBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetBus.swift; sourceTree = "<group>"; };
 		D13482581BDD9DBE00909A1B /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		D16DC4CA1BEC359600D6EB3C /* ShuttleMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShuttleMapViewController.swift; sourceTree = "<group>"; };
+		D16DC4CC1BEC359600D6EB3C /* Station.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		D193EEA71BF0732800D2ED7C /* ShuttleStopSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShuttleStopSelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,8 +131,13 @@
 		80AC77571BB343AE004E050C /* NJIT Student Guide */ = {
 			isa = PBXGroup;
 			children = (
-				D13482581BDD9DBE00909A1B /* Images */,
+				D16DC4CA1BEC359600D6EB3C /* ShuttleMapViewController.swift */,
+				D16DC4CC1BEC359600D6EB3C /* Station.swift */,
+				D193EEA71BF0732800D2ED7C /* ShuttleStopSelectViewController.swift */,
+				D10404B61BED212E00B24E54 /* GetBus.swift */,
+				B7DB87011BE07E7900CD6B22 /* ProfessorListViewController.swift */,
 				70AFC5331BDC36B70029FF09 /* ContactCellControl.swift */,
+				702FDFCF1BE04BE60005056A /* TestInternet.swift */,
 				70AFC52B1BDC18FB0029FF09 /* VectorControllerCell.swift */,
 				70AFC52C1BDC18FB0029FF09 /* VectorDetailControl.swift */,
 				70AFC52D1BDC18FB0029FF09 /* VectorViewController.swift */,
@@ -139,10 +154,10 @@
 				040B86C31BCF506B008457AE /* AcademicCell.swift */,
 				0468EE821BC320010032AC7D /* DateSelectAtheleticViewController.swift */,
 				B76BA9111BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift */,
-				D13482561BDD3E2200909A1B /* ProfessorListViewController.swift */,
 				B7FED58E1BB62D4C00F3FEB8 /* ScheduleViewController.swift */,
 				80AC77631BB343AE004E050C /* Assets.xcassets */,
 				80AC77651BB343AE004E050C /* LaunchScreen.storyboard */,
+				D13482581BDD9DBE00909A1B /* Images */,
 				80AC77681BB343AE004E050C /* Info.plist */,
 				B7FED5901BB6449F00F3FEB8 /* AtheleticViewController.swift */,
 				70AFC5311BDC344C0029FF09 /* ContactViewController.swift */,
@@ -212,7 +227,7 @@
 				TargetAttributes = {
 					80AC77541BB343AE004E050C = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = F48ZTW93WJ;
+						DevelopmentTeam = 3B7C99N489;
 					};
 					80AC776C1BB343AE004E050C = {
 						CreatedOnToolsVersion = 7.0;
@@ -267,26 +282,31 @@
 			files = (
 				70AFC52E1BDC18FB0029FF09 /* VectorControllerCell.swift in Sources */,
 				80531D4B1BDB2D6400C054BE /* KnowYourProfessorDetails.swift in Sources */,
-				D13482571BDD3E2200909A1B /* ProfessorListViewController.swift in Sources */,
 				040B86C41BCF506B008457AE /* AcademicCell.swift in Sources */,
 				0468EE831BC320010032AC7D /* DateSelectAtheleticViewController.swift in Sources */,
 				802C84201BDDA57B007D775B /* ViewController.swift in Sources */,
+				702FDFD01BE04BE60005056A /* TestInternet.swift in Sources */,
 				B7FED58F1BB62D4C00F3FEB8 /* ScheduleViewController.swift in Sources */,
+				D16DC4CD1BEC359600D6EB3C /* ShuttleMapViewController.swift in Sources */,
 				80AC775B1BB343AE004E050C /* RootViewController.swift in Sources */,
 				0435F1721BC4D703004B12F0 /* EurekaViewController.swift in Sources */,
 				B76BA9121BB8CD75000754F3 /* SetAppoinmentAtheleticViewController.swift in Sources */,
+				B7DB87021BE07E7900CD6B22 /* ProfessorListViewController.swift in Sources */,
 				80531D491BDB277000C054BE /* KnowYourProfessorController.swift in Sources */,
 				70AFC5321BDC344C0029FF09 /* ContactViewController.swift in Sources */,
 				70AFC5341BDC36B70029FF09 /* ContactCellControl.swift in Sources */,
 				B7FED5911BB6449F00F3FEB8 /* AtheleticViewController.swift in Sources */,
 				70AFC5301BDC18FB0029FF09 /* VectorViewController.swift in Sources */,
+				D10404B71BED212E00B24E54 /* GetBus.swift in Sources */,
 				0435F17C1BC4E631004B12F0 /* EurekaTableCellModel.swift in Sources */,
+				D16DC4CF1BEC359600D6EB3C /* Station.swift in Sources */,
 				047761951BC9BB4A00D98830 /* AcademicListViewController.swift in Sources */,
 				80AC775F1BB343AE004E050C /* ModelController.swift in Sources */,
 				0435F17A1BC4E27D004B12F0 /* EurekaTableControllerCell.swift in Sources */,
 				80AC775D1BB343AE004E050C /* DataViewController.swift in Sources */,
 				04D9A16C1BC4AA13004B5A5C /* AcademicCalendarTableViewController.swift in Sources */,
 				70AFC52F1BDC18FB0029FF09 /* VectorDetailControl.swift in Sources */,
+				D193EEA81BF0732800D2ED7C /* ShuttleStopSelectViewController.swift in Sources */,
 				80AC77591BB343AE004E050C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,7 +441,7 @@
 				INFOPLIST_FILE = "NJIT Student Guide/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "arif.NJIT-Student-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "balki.NJIT-Student-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -436,7 +456,7 @@
 				INFOPLIST_FILE = "NJIT Student Guide/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "arif.NJIT-Student-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "balki.NJIT-Student-Guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

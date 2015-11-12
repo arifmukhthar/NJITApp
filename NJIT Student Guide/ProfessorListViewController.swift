@@ -53,7 +53,7 @@ class ProfessorListViewController: UITableViewController {
         task1.resume()
         
     }
-
+    
     
     
     override func didReceiveMemoryWarning() {

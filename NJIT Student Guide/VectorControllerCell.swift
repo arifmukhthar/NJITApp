@@ -12,6 +12,7 @@ class VectorControllerCell: UITableViewCell {
 
     @IBOutlet weak var ArticleTitle: UILabel!
     
+    @IBOutlet weak var ArticleImg: UIImageView!
     @IBOutlet weak var ArticleDate: UILabel!
     
 }
