@@ -13,14 +13,28 @@ class Station: NSObject, MKAnnotation {
     var subtitle: String?
     var latitude: Double
     var longitude:Double
+    var type = String()
     
     var coordinate: CLLocationCoordinate2D {
         return CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
     
-    init(latitude: Double, longitude: Double) {
+    init(latitude: Double, longitude: Double,title: String,type: String) {
         self.latitude = latitude
         self.longitude = longitude
+        self.title = title
+        self.type = type
     }
+    
+    /*func pinColor()-> MKPinAnnotationColor{
+        switch type{
+            case "bus":
+            return .Green
+           // case "stop":
+            //return .Red
+        default:
+            return .Purple
+        }
+    }*/
 }
 

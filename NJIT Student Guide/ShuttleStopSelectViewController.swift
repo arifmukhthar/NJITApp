@@ -14,6 +14,7 @@ class ShuttleStopSelectViewController: UIViewController,UIPickerViewDataSource,U
     var pickerData = [String]()
     override func viewDidLoad() {
         pickerData = ["Kearney/Harrison","Penn Station Local","Campus Connect"]
+        selectedMap = "Kearney/Harrison"
         self.picker.delegate = self
         self.picker.dataSource = self
         super.viewDidLoad()
@@ -36,5 +37,6 @@ class ShuttleStopSelectViewController: UIViewController,UIPickerViewDataSource,U
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var destVC = segue.destinationViewController as! ShuttleMapViewController
         destVC.mapSelect = selectedMap
+        print("\(selectedMap)")
     }
 }
